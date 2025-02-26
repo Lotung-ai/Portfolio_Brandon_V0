@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "akzidenz-grotesk";
+    src: url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Bouton */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 1200; /* Toujours au-dessus */
+}
+
+    .menu-button:hover {
+        background: #334155;
+    }
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    direction: rtl; /* Texte aligné de droite à gauche */
+    
+}
+
+/* Liste du menu */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+/* Items du menu */
+.menu-item {
+    font-family: akzidenz-grotesk, sans-serif;
+    font-size: 64px; /* Augmentation de la taille de la police */
+    font-weight: 500;
+    color: #000; /* Couleur initiale */
+    padding: 10px 0;
+    display: block;
+    cursor: pointer;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, -webkit-text-fill-color 0.3s ease; /* Transition pour le hover */
+    -webkit-text-stroke: 2px #000; /* Contour initial du texte */
+    text-stroke: 2px #000; /* Pour les navigateurs modernes */
+}
+
+    .menu-item:hover {
+        -webkit-text-fill-color: transparent; /* Assurer que le texte est transparent */
+        -webkit-text-stroke: 2px #000; /* Contour du texte */
+        text-stroke: 2px #000; /* Pour les navigateurs modernes */
+    }

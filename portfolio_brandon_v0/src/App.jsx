@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Project1 from "./pages/projects/Project1";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+//import "./styles/VanHoltzCo.css";
 
 function App() {
     return (
