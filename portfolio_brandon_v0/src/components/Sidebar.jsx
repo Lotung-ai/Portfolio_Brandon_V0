@@ -27,12 +27,11 @@ const itemVariants = {
         x: 0,
         opacity: 1,
         transition: { delay: i * 0.1 + 0.2, duration: 0.3 },
-        transformOrigin: "right center",
         rotateY: -20
     }),
     hover: { 
         scale: 1.1, 
-        color: "#000",
+        color: "#4801FF",
         transition: { delay: 0.1, duration: 0.2 },
         rotateY: -10 
     }

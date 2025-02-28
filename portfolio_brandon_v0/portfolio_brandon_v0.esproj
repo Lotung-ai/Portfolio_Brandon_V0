@@ -8,4 +8,9 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\assets\home\" />
+    <Folder Include="src\assets\navbar\" />
+    <Folder Include="src\assets\projects\project-1\" />
+  </ItemGroup>
 </Project>

@@ -1,21 +1,33 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Project1 from "./pages/projects/Project1";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-//import "./styles/VanHoltzCo.css";
+import Home from "./pages/Home";
+import ProjectDetails from "./pages/projects/ProjectDetails";
 
-function App() {
+
+const AnimatedRoutes = () => {
+    const location = useLocation();
+
+    return (
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Home/>} />
+                <Route path="/project/:id" element={<ProjectDetails />} />
+            </Routes>
+        </AnimatePresence>
+    );
+};
+
+const App = () => {
     return (
         <Router>
             <Navbar />
             <Sidebar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/projects/Project1" element={<Project1 />} />
-            </Routes>       
+            <AnimatedRoutes />
         </Router>
     );
-}
+};
+
 
 export default App;

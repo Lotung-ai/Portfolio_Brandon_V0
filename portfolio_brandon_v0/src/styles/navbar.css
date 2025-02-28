@@ -1,0 +1,58 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    background: #0d0420;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 50;
+}
+
+/* Triangle animé à droite */
+.navbar-triangle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; /* Prend toute la largeur du navbar */
+    height: 100%;
+    background: #7D1BFF;
+    transition: transform 0.8s ease-in-out;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    z-index: 1;
+}
+
+/* Contenu */
+.navbar-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #ddd;
+    margin: 0 15px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .menu a:hover {
+        color: #fff;
+    }
+
+.contact {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}

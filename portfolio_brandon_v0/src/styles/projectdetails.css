@@ -1,0 +1,11 @@
+.project-details {
+    padding: 20px;
+}
+
+.back-button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
