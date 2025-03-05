@@ -7,13 +7,13 @@
 }
 
 /* Fond par défaut et application de la police */
-body {
+html, body {
     background-color: #4801FF;
     font-family: "akzidenz-grotesk", sans-serif; /* Applique la police */
     margin: 0;
-    margin-top: 120px; /* Décale tout le contenu sous la navbar */
-    padding: 10px;
+    margin-top: 50px; /* Décale tout le contenu sous la navbar */
     color: #000; /* Couleur du texte en blanc pour un bon contraste */
+    overflow-x: hidden;
 }
 
 /* Exemple de style pour les titres et autres éléments */

@@ -1,11 +1,98 @@
 .project-details {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Permet aux enfants de prendre toute la largeur */
+    position: relative; /* Permet de positionner le titre par-dessus l’image */
 }
-
 .back-button {
-    background: #333;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: none; /* Fond transparent */
     color: white;
     border: none;
-    padding: 10px 15px;
     cursor: pointer;
+    font-size: 2rem; /* Taille plus grande pour la flèche */
+    border-radius: 50%; /* Bouton rond */
+    width: 50px; /* Bouton plus grand */
+    height: 50px; /* Bouton plus grand */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+    .back-button:hover {
+        background: none; /* Fond transparent */
+        border-color: white; /* Garde le bord blanc */
+        border: 2px solid white; /* Bord blanc */
+        color: white; /* Assure que la flèche reste blanche */
+    }
+/* Conteneur de l’image */
+.image-container {
+    position: relative; /* Permet au titre de se positionner par-dessus */
+    width: 100%; /* L'image prend toute la largeur */
+}
+/* Image principale sans marge */
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    object-position:top;/* Laisse la hauteur s'adapter */
+}
+
+/* Titre positionné en haut à droite */
+.project-title {
+    position: absolute;
+    top: 1px; /* Distance du haut */
+    right: 20px; /* Distance de la droite */
+    font-size: clamp(2.5rem, 5vw, 6rem);
+    color: transparent; /* Vide l’intérieur */
+    -webkit-text-stroke: 0.1px #FFF; /* Contour pour Safari et Chrome */
+    text-stroke: 0.1px #FFF; /* Contour pour navigateurs modernes */
+    text-transform: uppercase; /* Mettre en majuscules (optionnel) */
+}
+/* Conteneur des textes */
+.text-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px; /* Définition d'une largeur maximale */
+    margin: 20px auto; /* Centre horizontalement */
+   /* Ajoute un peu d’espace sur les côtés */
+}
+
+/* Deux textes côte à côte avec une hauteur minimale */
+.text-box {
+    background: #f4f4f4;
+    padding: 15px;
+    text-align: center;
+    min-height: 150px; /* Hauteur minimale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Troisième texte en pleine largeur */
+.full-width {
+    grid-column: span 2;
+}
+/* Image secondaire */
+.project-image-small {
+    width: 100%; /* Prend toute la largeur */
+    max-width: 500px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    display: block;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .text-container {
+        grid-template-columns: 1fr; /* Un seul texte par ligne sur mobile */
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
 }
