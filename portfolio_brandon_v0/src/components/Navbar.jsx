@@ -20,10 +20,10 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="navbar"
         >
-            {/* Triangle à droite */}
+            {/* Triangle animé à droite */}
             <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: "60px" }}
+                animate={{ width: "100px" }}
                 exit={{ width: 0 }}
                 transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
                 className="navbar-triangle"
@@ -37,13 +37,15 @@ export default function Navbar() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="navbar-content"
             >
-                <Link to="/" className="logo">Logo</Link>
+                <Link to="/" className="logo">
+                    <div className="navbar-logo" />
+                </Link>
                 <div className="menu">
                     <Link to="/About">About me</Link>
                     <Link to="/Skills">Skills</Link>
                     <Link to="/Project">Project</Link>
+                    <Link to="/Contact">Contact</Link>
                 </div>
-                <Link to="/Contact" className="contact">Contact</Link>
             </motion.div>
         </motion.nav>
     );

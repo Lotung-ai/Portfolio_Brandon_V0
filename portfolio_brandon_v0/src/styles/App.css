@@ -16,6 +16,9 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    overflow: hidden;
+}
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p, .menu-item {
     font-family: "akzidenz-grotesk", sans-serif; /* Applique la police à tous les éléments de texte */
@@ -60,4 +63,3 @@ h1, h2, h3, p, .menu-item {
         width: 50%;
     }
 }
-
