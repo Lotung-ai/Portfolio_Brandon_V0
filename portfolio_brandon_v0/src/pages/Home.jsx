@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import "../styles/App.css";
 import loadImages from "../assets/utils/imageLoader"; // Importe la fonction
 
@@ -14,7 +14,7 @@ const Home = () => {
             className="home"
         >
             <h1>Bienvenue sur mon portfolio</h1>
-            <p>S�lectionnez un projet dans le menu.</p>
+            <p>Sélectionnez un projet dans le menu.</p>
 
             <div className="image-wrapper">
                 <img src={homeImages["back.jpg"]} alt="Back" className="background-image" />

@@ -9,7 +9,7 @@
 /* Fond par défaut et application de la police */
 html, body {
     background-color: #4801FF;
-    font-family: "akzidenz-grotesk", sans-serif; /* Applique la police */
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
     margin: 0;
     margin-top: 50px; /* Décale tout le contenu sous la navbar */
     color: #000; /* Couleur du texte en blanc pour un bon contraste */
@@ -21,7 +21,7 @@ body {
 }
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p, .menu-item {
-    font-family: "akzidenz-grotesk", sans-serif; /* Applique la police à tous les éléments de texte */
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
     color: #000; /* Texte en blanc */
 }
 
