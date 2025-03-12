@@ -1,9 +1,15 @@
 /* Style général du footer */
 .footer {
-    background-color: #1e3a8a; /* Bleu foncé */
-    color: white;
-    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+    z-index: 50;
 }
 
 /* Conteneur du footer */
@@ -18,38 +24,65 @@
 
 /* Section de gauche */
 .footer-left {
-    flex: 1; /* Prend toute la place disponible à gauche */
+    flex: 1;
     text-align: left;
 }
 
-.footer-left h2 {
-    margin: 0;
-    font-size: 20px;
-}
+    .footer-left h2 {
+        margin: 0;
+        font-size: 20px;
+        color: white;
+    }
 
-.footer-left p {
-    font-size: 14px;
-    margin: 5px 0 0;
-}
+    .footer-left p {
+        color: white;
+        font-size: 14px;
+        margin: 5px 0 0;
+    }
 
 /* Section de droite */
 .footer-right {
     display: flex;
-    gap: 20px;
-    flex: 1; /* Prend toute la place disponible à droite */
-    justify-content: flex-end; /* Aligne les liens à droite */
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* Aligner à droite */
+    width: auto;
+    min-width: 150px;
+    padding-right: 20px;
 }
 
-.footer-right a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
+    .footer-right a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        width: max-content;
+    }
+
+        .footer-right a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        flex: none;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
 }
 
-.footer-right a:hover {
-    color: #a5b4fc; /* Bleu clair au survol */
-}
+        }
+
 
 /* Responsive pour mobile */
 @media (max-width: 768px) {

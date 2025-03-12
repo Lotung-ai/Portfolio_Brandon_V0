@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import projects from "../../data/ProjectsData";
 import "../../styles/projectdetails.css";
+import Footer from "../../components/Footer";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -59,7 +60,10 @@ const ProjectDetails = () => {
                     animate="visible"
                     variants={fadeInDown}
                 />
-
+                <div className="project-details">
+                    {/* Contenu de la page */}
+                    <Footer fadeEffect={true} />
+                </div>
                 <motion.h2
                     className="project-title"
                     initial="hidden"

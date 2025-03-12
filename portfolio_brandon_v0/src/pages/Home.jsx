@@ -1,5 +1,5 @@
 ﻿import { motion } from "framer-motion";
-import "../styles/App.css";
+import "../styles/home.css";
 import loadImages from "../assets/utils/imageLoader"; // Importe la fonction
 
 const homeImages = loadImages("home"); // Charge uniquement les images du dossier "home"
