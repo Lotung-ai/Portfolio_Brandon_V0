@@ -1,7 +1,32 @@
+
+.home {
+    position: relative;
+    text-align: center;
+}
+.title, .text {
+    position: absolute;
+    font-family: Arial, sans-serif; /* Exemple de police */
+    z-index: 3; /* Assure que le texte soit au-dessus de l'image */
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement */
+
+}
+
+.title {
+    top: 1%; /* Ajuste la position verticale pour le titre */
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.text {
+    top: 10%; /* Ajuste la position verticale pour le texte */
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
 .image-wrapper {
     position: relative;
     display: inline-block;
-    width: 100%; /* Adapte à la largeur de l'écran */
+    width: 100%;
 }
 
 .background-image {
@@ -13,26 +38,104 @@
     position: absolute;
     top: 5%;
     left: 25%;
-    width: 15%; /* Ajuste selon la taille de l'écran */
+    width: 15%; 
     max-width: 11%;
     z-index: 2;
 }
 
+.dialogue-coffee-container {
+    position: absolute;
+    top: 9%;
+    left: 1%;
+    width: 100%;
+    max-width: 30%;
+    z-index: 2; /* Assurer que la bulle et le texte soient au-dessus des autres éléments */
+    text-align: center; /* Centrer le texte */
+}
+
+.dialogue-coffee {
+    width: 100%;
+}
+
+.dialogue-coffee-text {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    font-size: clamp(1rem, 2.2vw, 5rem);
+    width: 100%;
+    transform: translate(-50%, -50%); /* Centrer le texte à l'intérieur de la bulle */
+    font-weight: bold;
+    color: black; /* Assure que le texte est visible sur la bulle */
+    z-index: 3; /* Texte au-dessus de l'image de la bulle */
+}
+
 .pc-image {
     position: absolute;
-    top: 15.5%;
+    top: 14%;
     left: 25.5%;
     width: 100%;
     max-width: 51%;
     z-index: 1;
 }
+.dialogue-pc-container {
+    position: absolute;
+    top: 18%;
+    left: 70%;
+    width: 100%;
+    max-width: 30%;
+    z-index: 2; /* Assurer que la bulle et le texte soient au-dessus des autres éléments */
+    text-align: center; /* Centrer le texte */
+}
 
-@media (max-width: 768px) {
-    .coffee-image {
-        width: 11%;
-    }
+.dialogue-pc {
+    width: 100%;
+}
 
-    .pc-image {
-        width: 50%;
+.dialogue-pc-text {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    font-size: clamp(1rem, 2.2vw, 5rem);
+    width: 100%;
+    transform: translate(-50%, -50%); /* Centrer le texte à l'intérieur de la bulle */
+    font-weight: bold;
+    color: black; /* Assure que le texte est visible sur la bulle */
+    z-index: 3; /* Texte au-dessus de l'image de la bulle */
+}
+.phone-image {
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    width: 15%;
+    max-width: 11%;
+}
+.dialogue-phone-container {
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    width: 100%;
+    max-width: 30%;
+    z-index: 2; /* Assurer que la bulle et le texte soient au-dessus des autres éléments */
+    text-align: center; /* Centrer le texte */
+}
+
+.dialogue-phone {
+    width: 100%;
+}
+
+.dialogue-phone-text {
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    font-size: clamp(1rem, 2.2vw, 5rem);
+    width: 100%;
+    transform: translate(-50%, -50%); /* Centrer le texte à l'intérieur de la bulle */
+    font-weight: bold;
+    color: black; /* Assure que le texte est visible sur la bulle */
+    z-index: 3; /* Texte au-dessus de l'image de la bulle */
+}
+@media (max-width: 1024px) {
+    .text {
+        top: 85%;
     }
 }

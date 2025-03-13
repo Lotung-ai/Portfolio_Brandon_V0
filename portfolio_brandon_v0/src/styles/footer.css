@@ -1,15 +1,26 @@
 /* Style général du footer */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
     padding: 15px 0;
     text-align: center;
     transition: opacity 0.5s ease-out;
     z-index: 50;
+    position: absolute;
+}
+
+/* Footer fixe pour la page "projectdetail" */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer relatif pour les autres pages */
+.relative-footer {
+    background: transparent;
+    position: relative;
+    width: 100%;
 }
 
 /* Conteneur du footer */
@@ -31,11 +42,9 @@
     .footer-left h2 {
         margin: 0;
         font-size: 20px;
-        color: white;
     }
 
     .footer-left p {
-        color: white;
         font-size: 14px;
         margin: 5px 0 0;
     }
@@ -45,18 +54,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start; /* Aligner à droite */
+    align-items: flex-start; /* Aligner à gauche */
     width: auto;
     min-width: 150px;
     padding-right: 20px;
 }
 
     .footer-right a {
-        color: white;
         text-decoration: none;
         font-size: 14px;
         transition: color 0.3s ease;
-        width: max-content;
+        color: white;
     }
 
         .footer-right a:hover {
@@ -73,26 +81,6 @@
 
     .footer-left, .footer-right {
         flex: none;
-        text-align: center;
-    }
-
-    .footer-right {
-        margin-top: 10px;
-    }
-}
-
-        }
-
-
-/* Responsive pour mobile */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left, .footer-right {
-        flex: none; /* Désactive le flex pour le responsive */
         text-align: center;
     }
 

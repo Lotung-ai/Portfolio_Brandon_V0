@@ -11,17 +11,23 @@ html, body {
     background-color: #4801FF;
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
     margin: 0;
-    margin-top: 50px; /* Décale tout le contenu sous la navbar */
-    color: #000; /* Couleur du texte en blanc pour un bon contraste */
+    margin-top: 50px;
+    color: #FFF; /* Couleur du texte en noir */
     overflow-x: hidden;
 }
 
 body {
     overflow: hidden;
 }
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    html, body {
+        margin-top: 50px; /* Réduit l'espace en haut sur les petits écrans */
+    }
+}
+
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p, .menu-item {
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
-    color: #000; /* Texte en blanc */
 }
-

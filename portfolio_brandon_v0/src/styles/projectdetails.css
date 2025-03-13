@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: stretch; /* Permet aux enfants de prendre toute la largeur */
     position: relative; /* Permet de positionner le titre par-dessus l’image */
+    padding-bottom: 100px;
 }
 .back-button {
     position: absolute;
@@ -56,13 +57,14 @@
 }
 /* Conteneur des textes */
 .text-container {
+    color: black;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     width: 100%;
     max-width: 1200px; /* Définition d'une largeur maximale */
     margin: 20px auto; /* Centre horizontalement */
-   /* Ajoute un peu d’espace sur les côtés */
+    /* Ajoute un peu d’espace sur les côtés */
 }
 
 /* Deux textes côte à côte avec une hauteur minimale */
@@ -81,7 +83,7 @@
 }
 /* Image secondaire */
 .project-image-small {
-    width: 100%; /* Prend toute la largeur */
+    width: 100%; 
     max-width: 500px;
     margin: 20px auto 0;
     border-radius: 10px;
@@ -90,7 +92,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .text-container {
-        grid-template-columns: 1fr; /* Un seul texte par ligne sur mobile */
+        grid-template-columns: 1fr; 
     }
 
     .full-width {

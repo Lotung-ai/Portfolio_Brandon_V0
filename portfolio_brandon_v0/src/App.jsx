@@ -4,23 +4,25 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
 import ProjectDetails from "./pages/projects/ProjectDetails";
 import "./styles/App.css";
 
 const AnimatedRoutes = () => {
     const location = useLocation();
-    const isProjectDetailsPage = location.pathname.startsWith("/project/"); // Vérifie si on est sur un projet
+    const isProjectDetailsPage = location.pathname.startsWith("/projects/"); // Vérifie si on est sur un projet
 
     return (
         <>
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/project/:id" element={<ProjectDetails />} />
+                    <Route path="/aboutme" element={<AboutMe />} />
+                    <Route path="/projects/:id" element={<ProjectDetails />} />
                 </Routes>
             </AnimatePresence>
-            {/* Applique l'effet seulement si on est sur un ProjectDetails */}
-            <Footer fadeEffect={isProjectDetailsPage} />
+            {/* Affiche le footer sauf pour les pages projet */}
+            {!isProjectDetailsPage && <Footer />}
         </>
     );
 };

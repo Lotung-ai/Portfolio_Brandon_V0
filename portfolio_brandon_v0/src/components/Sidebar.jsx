@@ -43,7 +43,7 @@ const Sidebar = () => {
 
     const handleClick = (id) => {
         setIsOpen(false); // Ferme le menu
-        navigate(`/project/${id}`); // Redirige vers la page du projet
+        navigate(`/projects/${id}`); // Redirige vers la page du projet
     };
 
     return (

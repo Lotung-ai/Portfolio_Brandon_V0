@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/footer.css";
 
-const Footer = ({ fadeEffect }) => {
+const Footer = ({ fadeEffect, isFixed }) => {
     const { scrollYProgress } = useScroll();
 
     // Gère l'opacité en fonction du scroll
@@ -27,8 +27,12 @@ const Footer = ({ fadeEffect }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Applique la classe conditionnelle pour fixer ou laisser relatif
+    const footerClass = isFixed ? "footer fixed-footer" : "footer relative-footer";
+
     return (
         <motion.footer
+            className={footerClass}
             style={
                 fadeEffect
                     ? {
@@ -36,7 +40,6 @@ const Footer = ({ fadeEffect }) => {
                     }
                     : {}
             }
-            className="footer"
         >
             <div className="footer-container">
                 <div className="footer-left">
@@ -52,13 +55,17 @@ const Footer = ({ fadeEffect }) => {
         </motion.footer>
     );
 };
-// ✅ Ajoute la validation des props pour éviter l'erreur
+
+// Ajoute la validation des props pour éviter l'erreur
 Footer.propTypes = {
     fadeEffect: PropTypes.bool,
+    isFixed: PropTypes.bool,
 };
 
-// ✅ Définit une valeur par défaut (false) si `fadeEffect` n'est pas fourni
+// Définit une valeur par défaut (false) si `fadeEffect` n'est pas fourni
 Footer.defaultProps = {
     fadeEffect: false,
+    isFixed: false, // Par défaut, le footer est relatif
 };
+
 export default Footer;

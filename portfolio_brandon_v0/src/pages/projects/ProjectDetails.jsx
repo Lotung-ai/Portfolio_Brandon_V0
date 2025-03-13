@@ -60,10 +60,10 @@ const ProjectDetails = () => {
                     animate="visible"
                     variants={fadeInDown}
                 />
-                <div className="project-details">
-                    {/* Contenu de la page */}
-                    <Footer fadeEffect={true} />
-                </div>
+
+                {/* Contenu de la page */}
+                <Footer fadeEffect={true} isFixed={true} />
+
                 <motion.h2
                     className="project-title"
                     initial="hidden"
