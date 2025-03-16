@@ -12,7 +12,7 @@ html, body {
     background-color: #4801FF;
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
     margin: 0;
-    margin-top: 50p;
+    margin-top: 50px;
     color: #FFF; /* Couleur du texte en noir */
     overflow-x: hidden;
 }
@@ -29,6 +29,18 @@ body {
 }
 
 /* Exemple de style pour les titres et autres éléments */
-h1, h2, h3, p, .menu-item {
+h1, h2, h3, p,label,button, .button-send, .menu-item {
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
+}
+/* Titres responsives */
+h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
 }

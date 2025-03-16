@@ -1,0 +1,56 @@
+.contact-container {
+    position: relative;
+    width: 100%;
+    display: block;
+    align-items: center;
+    padding: 2rem;
+}
+
+.list-item {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+    width: 75%;
+    max-width: 600px; /* Largeur du formulaire, ajustable selon ta préférence */
+    margin: 10px; /* Espacement interne */
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px; /* Ajout d'espace sous le label */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Espacement sous chaque champ */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 200px; /* Taille ajustée pour la textarea */
+    resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+.button-send {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px; /* Espacement au-dessus du bouton */
+    width: 100%; /* Le bouton prend toute la largeur */
+}
+
+    button:hover {
+        background: #0056b3; /* Couleur de survol pour le bouton */
+    }

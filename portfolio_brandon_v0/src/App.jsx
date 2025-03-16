@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import ProjectDetails from "./pages/projects/ProjectDetails";
+import Contact from "./pages/Contact";
 import "./styles/App.css";
 
 const AnimatedRoutes = () => {
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/aboutme" element={<AboutMe />} />
                     <Route path="/projects/:id" element={<ProjectDetails />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
             </AnimatePresence>
             {/* Affiche le footer sauf pour les pages projet */}

@@ -42,9 +42,8 @@ export default function Navbar() {
                 </Link>
                 <div className="menu">
                     <Link to="/aboutme">About me</Link>
-                    <Link to="/Skills">Skills</Link>
-                    <Link to="/Project">Project</Link>
-                    <Link to="/Contact">Contact</Link>
+                    <Link to="/project">Project</Link>
+                    <Link to="/contact">Contact</Link>
                 </div>
             </motion.div>
         </motion.nav>
