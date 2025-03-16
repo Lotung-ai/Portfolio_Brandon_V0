@@ -1,0 +1,197 @@
+/* Titres responsives */
+h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+/* Conteneur principal */
+.about-me-container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+/* Effet brouillard */
+.foggy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 100;
+    animation: staticNoise 0.3s infinite linear;
+}
+
+/* Section image + texte */
+.image-text-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    width:100%;
+    left: -50%;
+}
+
+.animated-background-image {
+    position:absolute;
+    width: 100%;
+    height: auto;
+}
+
+.image-text {
+    position: relative; 
+    font-weight: bold;
+    text-align: center;
+    margin-left: 60%;
+}
+
+/* Image de profil */
+.profile-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 400px;
+    margin: 2rem auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    z-index:1;
+}
+
+.profile-image-container::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #6047B3;
+    border-radius: 20%;
+
+}
+
+/* Section description */
+.description,
+.contact, .content-language {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Section contact */
+.list-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Galerie d'images */
+.image-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.animated-image {
+    position : absolute;
+    border-radius: 80px;
+    width : 500px;
+}
+.content-all {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-items {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.gallery-content-skills, .gallery-content-tools, .gallery-content-framework {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+}
+.gallery-content-skills {
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+}
+.gallery-content-tools {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+}
+.gallery-content-framework {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+}
+.logo-image {
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+/*/@media (min-width: 1048px) {
+    .profile-image-container {
+        width: 220px;
+        height: 320px;
+    }
+
+    .description, .contact {
+        width: 80%;
+    }
+}
+
+@media (min-width: 720px) {
+    .profile-image-container {
+        width: 180px;
+        height: 270px;
+    }
+
+    .description, .contact {
+        width: 95%;
+    }
+
+    .gallery-content-skills, .gallery-content-tools {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+}*/

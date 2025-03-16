@@ -41,7 +41,7 @@ export default function Navbar() {
                     <div className="navbar-logo" />
                 </Link>
                 <div className="menu">
-                    <Link to="/About">About me</Link>
+                    <Link to="/aboutme">About me</Link>
                     <Link to="/Skills">Skills</Link>
                     <Link to="/Project">Project</Link>
                     <Link to="/Contact">Contact</Link>
