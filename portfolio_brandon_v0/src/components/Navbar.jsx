@@ -42,7 +42,7 @@ export default function Navbar() {
                 </Link>
                 <div className="menu">
                     <Link to="/aboutme">About me</Link>
-                    <Link to="/project">Project</Link>
+                    <Link to="/projects">Projects</Link>
                     <Link to="/contact">Contact</Link>
                 </div>
             </motion.div>

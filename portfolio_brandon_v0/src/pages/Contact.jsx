@@ -54,13 +54,13 @@ const ContactForm = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <motion.h2
+            <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
                 Contactez-moi
-            </motion.h2>
+            </motion.h1>
 
             <motion.form
                 onSubmit={handleSubmit}

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
+import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/projects/ProjectDetails";
 import Contact from "./pages/Contact";
 import "./styles/App.css";
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home />} />
                     <Route path="/aboutme" element={<AboutMe />} />
+                    <Route path="/projects" element={<Projects />} />
                     <Route path="/projects/:id" element={<ProjectDetails />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
