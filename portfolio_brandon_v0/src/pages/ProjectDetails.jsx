@@ -1,9 +1,9 @@
 ﻿import { motion, useInView } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import projects from "../../data/ProjectsData";
-import "../../styles/projectdetails.css";
-import Footer from "../../components/Footer";
+import projects from "../data/ProjectsData";
+import "../styles/projectdetails.css";
+import Footer from "../components/Footer";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },

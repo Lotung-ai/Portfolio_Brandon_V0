@@ -11,20 +11,6 @@
     padding: 2rem 0rem;
 }
 
-/* Effet brouillard */
-.foggy-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: 100;
-    animation: staticNoise 0.3s infinite linear;
-}
-
 /* Section image + texte */
 .image-text-section {
     position: relative;
@@ -48,7 +34,7 @@
     position: relative; 
     font-weight: bold;
     text-align: center;
-    margin-left: 60%;
+    margin-left: 53%;
 }
 
 /* Image de profil */

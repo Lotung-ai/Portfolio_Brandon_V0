@@ -1,10 +1,13 @@
-import { motion } from "framer-motion";
+ï»¿import { motion } from "framer-motion";
 import "../styles/aboutme.css";
-import loadImages from "../assets/utils/imageLoader"; // Charge les images
+import loadImages from "../assets/utils/imageLoader";
 
 const aboutMeImages = loadImages("aboutme"); // Charge uniquement les images du dossier "aboutme"
 
 const AboutMe = () => {
+
+
+
     return (
         <motion.div
             className="about-me-container"
@@ -12,7 +15,9 @@ const AboutMe = () => {
             animate={{ backgroundColor: "#1A1C32" }} // Changement de couleur de fond progressif
             transition={{ duration: 0.5 }}
         >
-            <div className="foggy-overlay"></div>
+          
+        
+          
 
             <motion.div
                 className="image-text-section"
@@ -25,7 +30,7 @@ const AboutMe = () => {
                 <h1 className="image-text">About Me</h1>
             </motion.div>
 
-            {/* Photo en haut à gauche */}
+            {/* Photo en haut Ã  gauche */}
             <motion.div className="profile-image-container">
                 <motion.img
                     src={aboutMeImages["shinji_profile_image.jpeg"]}
@@ -39,17 +44,17 @@ const AboutMe = () => {
 
 
             {/* Description en bas */}
-            <div className="description">
+            <motion.div className="description">
                 <p>
                     Bonjour<br></br>
                     Je m&apos;appelle Brandon KU <br></br>
-                    Je suis développeur fullstack avec une forte spécialisation en backend C#/.NET,
-                    tout en ayant de solides compétences en ReactJS pour le frontend
+                    Je suis dÃ©veloppeur fullstack avec une forte spÃ©cialisation en backend C#/.NET,
+                    tout en ayant de solides compÃ©tences en ReactJS pour le frontend
 
                 </p>
-                <p> Passionné par le développement et les nouvelles technologies,
-                    j’aime apprendre, expérimenter et repousser les limites pour concevoir des applications performantes et utiles.</p>
-            </div>
+                <p> PassionnÃ© par le dÃ©veloppement et les nouvelles technologies,
+                    jâ€™aime apprendre, expÃ©rimenter et repousser les limites pour concevoir des applications performantes et utiles.</p>
+            </motion.div>
             <div className="contact">
                 <h2 className="title-contact">Contact</h2>
                 <div className="list-item">
@@ -109,13 +114,14 @@ const AboutMe = () => {
                         <div className="content-language">
                             <h2 className="title-language">Langues</h2>
                             <div className="list-item">
-                            <p className="item-language">Français : langue maternelle</p>
+                            <p className="item-language">FranÃ§ais : langue maternelle</p>
                                 <p className="item-language">Anglais : B2</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </motion.div>
+                </motion.div>
+            
         </motion.div>
     );
 };

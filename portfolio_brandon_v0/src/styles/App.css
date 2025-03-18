@@ -44,3 +44,6 @@ h2 {
 p {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
+.button, .clickable {
+    cursor: pointer;
+}

@@ -11,6 +11,10 @@ const Home = () => {
     const [showBubbleCoffee, setShowBubbleCoffee] = useState(false);
     const [showBubblePhone, setShowBubblePhone] = useState(false); 
 
+    const [isCoffeeClicked, setIsCoffeeClicked] = useState(false);
+    const [isPCClicked, setIsPCClicked] = useState(false);
+    const [isPhoneClicked, setIsPhoneClicked] = useState(false);
+
     const navigate = useNavigate();
 
     return (
@@ -26,17 +30,21 @@ const Home = () => {
                     src={homeImages["back.jpg"]}
                     alt="Back"
                     className="background-image" />
-                <h1 className="title">Welcome in my portfolio</h1>
+                <h2 className="title">Welcome in my portfolio</h2>
                 <p className="text">Select an item on the menu</p>
                 <motion.img
-                    src={homeImages["coffee.png"]}
+                    src={isCoffeeClicked ? homeImages["coffee_out.png"] : homeImages["coffee.png"]}
                     alt="Coffee"
                     className="coffee-image"
+                    animate={{ x: 0, y: 0 }}
                     whileHover={{ y: 10 }}
                     transition={{ type: "spring", stiffness: 120 }}
                     onHoverStart={() => setShowBubbleCoffee(true)}
                     onHoverEnd={() => setShowBubbleCoffee(false)}
-                    onClick={() => navigate("/aboutme")}
+                    onClick={() => {
+                        setIsCoffeeClicked(true); // Change l'image
+                        setTimeout(() => navigate("/aboutme"), 500); // Navigue après un court délai
+                    }}
                 />
                 <motion.div
                     className="dialogue-coffee-container"
@@ -52,14 +60,17 @@ const Home = () => {
                     <p className="dialogue-coffee-text">About me, click here</p>
                 </motion.div>
                 <motion.img
-                    src={homeImages["pc.png"]}
+                    src={isPCClicked ? homeImages["pc_fire.png"] : homeImages["pc.png"]}
                     alt="PC"
                     className="pc-image"
                     whileHover={{ y: 10 }}
                     transition={{ type: "spring", stiffness: 120 }}
                     onHoverStart={() => setShowBubblePC(true)}
                     onHoverEnd={() => setShowBubblePC(false)}
-                    onClick={() => navigate("/projects")}
+                    onClick={() => {
+                        setIsPCClicked(true); // Change l'image
+                        setTimeout(() => navigate("/projects"), 500); // Navigue après un court délai
+                    }}
                 />                
                 <motion.div
                     className="dialogue-pc-container"
@@ -75,14 +86,17 @@ const Home = () => {
                     <p className="dialogue-pc-text">About my project, click here</p>
                 </motion.div>
                 <motion.img
-                    src={homeImages["phone.png"]}
+                    src={isPhoneClicked ? homeImages["phone_smiling.png"] : homeImages["phone.png"]}
                     alt="Phone"
                     className="phone-image"
                     whileHover={{ y: 10 }}
                     transition={{ type: "spring", stiffness: 120 }}
                     onHoverStart={() => setShowBubblePhone(true)}
                     onHoverEnd={() => setShowBubblePhone(false)}
-                    onClick={() => navigate("/contact")}
+                    onClick={() => {
+                        setIsPhoneClicked(true); // Change l'image
+                        setTimeout(() => navigate("/contact"), 500); // Navigue après un court délai
+                    }}
                 />
                 <motion.div
                     className="dialogue-phone-container"

@@ -3,10 +3,11 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
-import ProjectDetails from "./pages/projects/ProjectDetails";
+import ProjectDetails from "./pages/ProjectDetails";
 import Contact from "./pages/Contact";
 import "./styles/App.css";
 
@@ -34,6 +35,7 @@ const AnimatedRoutes = () => {
 const App = () => {
     return (
         <Router>
+            <ScrollToTop />
             <Navbar />
             <Sidebar />
             <AnimatedRoutes />

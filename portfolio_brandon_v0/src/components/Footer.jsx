@@ -1,7 +1,7 @@
 ﻿import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "../styles/footer.css";
+import "../styles/components/footer.css";
 
 const Footer = ({ fadeEffect, isFixed }) => {
     const { scrollYProgress } = useScroll();

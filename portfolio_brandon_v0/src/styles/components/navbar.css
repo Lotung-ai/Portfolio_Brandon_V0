@@ -1,0 +1,66 @@
+/* Barre de navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Prend toute la largeur de l'écran */
+    height: 120px;
+    background: #0d0420;
+    display: flex;
+    justify-content: space-between; /* Répartit le logo à gauche et le menu */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 0 10px; /* Ajoute un peu d'espace autour */
+    overflow: hidden;
+    z-index: 50;
+}
+
+/* Logo animé */
+.spin-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('/src/assets/navbar/logo_classique_white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: spinDiamond3D 2s linear;
+}
+
+/* Contenu de la navbar */
+.navbar-content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: left; /* Centre les éléments du menu */
+}
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px; /* Espacement entre les liens */
+}
+
+    /* Liens du menu */
+    .menu a {
+        color: #ddd;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+        .menu a:hover {
+            color: #fff;
+        }
+
+
+/* Animation du logo */
+@keyframes spinDiamond3D {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}

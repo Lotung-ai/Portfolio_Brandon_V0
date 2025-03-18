@@ -1,12 +1,11 @@
-import { motion } from "framer-motion";
+ï»¿import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../styles/projects.css"; // Ajoute un fichier CSS pour le style
 import projects from "../data/ProjectsData";
 
-// Animation de la page entière (effet de slide-in comme le sidebar)
 const pageVariants = {
     hidden: {
-        x: "100%", // Cacher complètement à droite
+        x: "100%", // Cacher complÃ¨tement Ã  droite
         opacity: 0,
         rotate: 0,
     },
@@ -18,14 +17,14 @@ const pageVariants = {
     }
 };
 
-// Animation des items (mêmes effets que le sidebar)
+// Animation des items (mÃªmes effets que le sidebar)
 const itemVariants = {
-    hidden: { x: 50, opacity: 0 },
+    hidden: { x: -50, opacity: 0 },
     visible: (i) => ({
         x: 0,
         opacity: 1,
         transition: { delay: i * 0.1 + 0.5, duration: 0.5 },
-        rotateY: -20
+        rotateY: 10
     }),
     hover: {
         scale: 1.1,
@@ -44,10 +43,11 @@ const ProjectsPage = () => {
     const navigate = useNavigate();
 
     const handleClick = (id) => {
-        navigate(`/projects/${id}`); // Redirection vers les détails du projet
+        navigate(`/projects/${id}`); // Redirection vers les dÃ©tails du projet
     };
 
     return (
+
         <motion.div
             className="projects-container"
             initial="hidden"
@@ -55,6 +55,7 @@ const ProjectsPage = () => {
             exit="hidden"
             variants={pageVariants}
         >
+            
             <h1>Mes Projets</h1>
 
             <ul className="projects-list">
