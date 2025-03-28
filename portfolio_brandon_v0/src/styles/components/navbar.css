@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw; /* Prend toute la largeur de l'écran */
     height: 120px;
-    background: #0d0420;
+    background: #000;
     display: flex;
     justify-content: space-between; /* Répartit le logo à gauche et le menu */
     align-items: center; /* Centre verticalement les éléments */

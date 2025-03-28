@@ -1,4 +1,4 @@
-const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,svg}", { eager: true });
+const images = import.meta.glob("/src/assets/**/*.{png,jpg,jpeg,svg,mp4}", { eager: true });
 
 export default function loadImages(folder) {
     return Object.fromEntries(

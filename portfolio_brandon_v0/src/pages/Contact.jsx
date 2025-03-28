@@ -2,6 +2,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
+import loadImages from "../assets/utils/imageLoader";
+
+const aboutMeImages = loadImages("contact");
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -10,35 +13,25 @@ const ContactForm = () => {
         message: "",
     });
 
-    const [status, setStatus] = useState(""); // Pour afficher le message de confirmation
+    const [status, setStatus] = useState("");
 
-    // Gère le changement des champs
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Envoi du formulaire via EmailJS
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Vérification des champs vides
         if (!formData.name || !formData.email || !formData.message) {
             setStatus("Veuillez remplir tous les champs.");
             return;
         }
 
-        // Configuration EmailJS
         emailjs
-            .send(
-                "YOUR_SERVICE_ID", // Remplace avec ton Service ID EmailJS
-                "YOUR_TEMPLATE_ID", // Remplace avec ton Template ID EmailJS
-                formData,
-                "YOUR_PUBLIC_KEY" // Remplace avec ta clé publique EmailJS
-            )
+            .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_PUBLIC_KEY")
             .then(
                 () => {
                     setStatus("Message envoyé avec succès !");
-                    setFormData({ name: "", email: "", message: "" }); // Réinitialise le formulaire
+                    setFormData({ name: "", email: "", message: "" });
                 },
                 (error) => {
                     setStatus("Erreur lors de l'envoi du message.");
@@ -50,49 +43,92 @@ const ContactForm = () => {
     return (
         <motion.div
             className="contact-container"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <motion.h1
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            <div className="background-container">
+                <motion.img
+                    src={aboutMeImages["background.png"]}
+                    alt="background"
+                    className="background-image-eva"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                />
+
+                <motion.img
+                    src={aboutMeImages["image_eye.png"]}
+                    alt="eye"
+                    className="eye-image"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                />
+
+                <motion.div
+                    className="glow-point"
+                    initial={{ opacity: 0 }}
+                    animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0,1, 0.5, 1],
+                    }}
+                    transition={{
+                        duration: 1,
+                        ease: "easeOut",
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        delay: 0.8
+                    }}
+                />
+            </div>
+
+            <motion.div
+                className="contact-form-container"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
             >
-                Contactez-moi
-            </motion.h1>
-
-            <motion.form
-                onSubmit={handleSubmit}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            >
-                <div className="list-item">
-                    <p className="item-contact">Email</p>
-                    <p className="item-contact">Linkedin</p>
-                    <p className="item-contact">Github</p>
-                </div>
-
-                <label>Nom :</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-
-                <label>Email :</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-
-                <label>Message :</label>
-                <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
-
-                <motion.button
-                    className="button-send"
-                    type="submit"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                <motion.h1
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
-                    Envoyer
-                </motion.button>
-            </motion.form>
+                    Contactez-moi
+                </motion.h1>
+
+                <motion.form
+                    onSubmit={handleSubmit}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                >
+                    <div className="list-item">
+                        <p className="item-contact">Email</p>
+                        <p className="item-contact">Linkedin</p>
+                        <p className="item-contact">Github</p>
+                    </div>
+
+                    <label>Nom :</label>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+
+                    <label>Email :</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+
+                    <label>Message :</label>
+                    <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
+
+                    <motion.button
+                        className="button-send"
+                        type="submit"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        Envoyer
+                    </motion.button>
+                </motion.form>
+            </motion.div>
 
             {status && (
                 <motion.p

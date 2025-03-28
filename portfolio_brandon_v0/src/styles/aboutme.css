@@ -1,4 +1,3 @@
-
 /* Conteneur principal */
 .about-me-container {
     position: relative;
@@ -8,33 +7,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0rem;
-}
-
-/* Section image + texte */
-.image-text-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    width:100%;
-    left: -50%;
-}
-
-.animated-background-image {
-    position:absolute;
-    width: 100%;
-    height: auto;
-}
-
-.image-text {
-    position: relative; 
-    font-weight: bold;
-    text-align: center;
-    margin-left: 53%;
+    padding: 2rem 0;
 }
 
 /* Image de profil */
@@ -43,41 +16,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 400px;
-    margin: 2rem auto;
+    width: 400px;
+    height: 660px;
+    margin: 1rem auto;
 }
 
 .profile-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 20%;
-    z-index:1;
+    position: absolute;
+    top: 26%;
+    width: 187px;
+    height: 250px;
 }
 
-.profile-image-container::before {
-    content: "";
+.profile-frame {
     position: absolute;
-    top: 10px;
-    left: 10px;
     width: 100%;
     height: 100%;
-    border: 2px solid #6047B3;
-    border-radius: 20%;
-
 }
 
 /* Section description */
-.description,
-.contact, .content-language {
+.description-text {
+    position: absolute;
+    top: 63%;
+    width: 64%;
+    max-width: 500px;
+    color: #AD00FE;
+    background-color: black;
+    text-align: justify;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    z-index: 3;
+}
+
+/* Section contact */
+.contact-section {
     width: 100%;
     max-width: 500px;
     text-align: center;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
-/* Section contact */
-.list-item {
+.contact-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
@@ -85,7 +65,7 @@
 }
 
 /* Galerie d'images */
-.image-gallery {
+.image-gallery-section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -93,20 +73,13 @@
     width: 100%;
 }
 
-.animated-image {
-    position : absolute;
-    border-radius: 80px;
-    width : 500px;
+.gallery-background {
+    position: absolute;
+    opacity: 0.3;
+    width: 600px;
 }
-.content-all {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; 
-}
-.content {
+
+.gallery-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -115,57 +88,36 @@
     text-align: center;
 }
 
-.content-items {
+.gallery-items {
     width: 100%;
     text-align: center;
     margin-top: 2rem;
 }
 
-.gallery-content-skills, .gallery-content-tools, .gallery-content-framework {
+/* Galerie skills, tools, frameworks */
+.gallery-skills, .gallery-tools, .gallery-frameworks {
     display: grid;
     gap: 10px;
     justify-content: center;
     width: 100%;
     max-width: 400px;
 }
-.gallery-content-skills {
+
+.gallery-skills {
     grid-template-columns: repeat(3, minmax(80px, 1fr));
 }
-.gallery-content-tools {
+
+.gallery-tools {
     grid-template-columns: repeat(4, minmax(80px, 1fr));
 }
-.gallery-content-framework {
+
+.gallery-frameworks {
     grid-template-columns: repeat(4, minmax(80px, 1fr));
 }
+
 .logo-image {
-    width: 100px;
+    width: 80px;
     border-radius: 5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-/*/@media (min-width: 1048px) {
-    .profile-image-container {
-        width: 220px;
-        height: 320px;
-    }
-
-    .description, .contact {
-        width: 80%;
-    }
-}
-
-@media (min-width: 720px) {
-    .profile-image-container {
-        width: 180px;
-        height: 270px;
-    }
-
-    .description, .contact {
-        width: 95%;
-    }
-
-    .gallery-content-skills, .gallery-content-tools {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    }
-}*/

@@ -9,7 +9,7 @@
 
 /* Fond par défaut et application de la police */
 html, body {
-    background-color: #4801FF;
+    background-color: #000;
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
     margin: 0;
     margin-top: 50px;
