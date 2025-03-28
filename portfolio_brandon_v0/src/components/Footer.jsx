@@ -1,9 +1,12 @@
 ﻿import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 import "../styles/components/footer.css";
 
 const Footer = ({ fadeEffect, isFixed }) => {
+
+    const { t } = useTranslation();
     const { scrollYProgress } = useScroll();
 
     // Gère l'opacité en fonction du scroll
@@ -43,13 +46,13 @@ const Footer = ({ fadeEffect, isFixed }) => {
         >
             <div className="footer-container">
                 <div className="footer-left">
-                    <h2>VotreSite</h2>
-                    <p>&copy; {new Date().getFullYear()} Tous droits réservés.</p>
+                    <h2>{t('footerTitle')}</h2>
+                    <p>&copy; {new Date().getFullYear()} {t('footerCopyright')}</p>
                 </div>
                 <div className="footer-right">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Confidentialité</a>
-                    <a href="#">Contact</a>
+                    <a href="#">{t('footerAboutMe')}</a>
+                    <a href="#">{t('footerProjects')}</a>
+                    <a href="#">{t('footerContact')}</a>
                 </div>
             </div>
         </motion.footer>

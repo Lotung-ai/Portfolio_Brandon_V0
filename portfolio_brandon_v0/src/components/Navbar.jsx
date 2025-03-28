@@ -1,9 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "./LanguageSwitcher";
 import "../styles/components/navbar.css";
 
 export default function Navbar() {
+    const { t } = useTranslation();
+
     const [showNav, setShowNav] = useState(true); // Contrôle l'opacité lors du scroll
     const [lastScrollY, setLastScrollY] = useState(0); // Pour suivre la position du scroll
     const location = useLocation();
@@ -79,9 +83,10 @@ export default function Navbar() {
                     <div className="navbar-logo" />
                 </Link>
                 <div className="menu">
-                    <Link to="/aboutme">About me</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/aboutme">{t('navBarItemAboutMe')}</Link>
+                    <Link to="/projects">{t('navBarItemProjects')}</Link>
+                    <Link to="/contact">{t('navBarItemContact')}</Link>
+                    <LanguageSwitcher/>
                 </div>
             </motion.div>
         </motion.nav>

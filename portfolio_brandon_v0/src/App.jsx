@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 import Contact from "./pages/Contact";
 import "./styles/App.css";
+import './utils/i18n';
 
 const AnimatedRoutes = () => {
     const location = useLocation();

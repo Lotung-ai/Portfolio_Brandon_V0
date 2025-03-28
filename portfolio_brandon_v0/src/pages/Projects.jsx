@@ -1,9 +1,10 @@
 ﻿import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "../styles/projects.css";
 import projects from "../data/ProjectsData";
-import loadImages from "../assets/utils/imageLoader";
+import loadImages from "../utils/imageLoader";
 
 const loadImage = loadImages("projects");
 
@@ -24,6 +25,8 @@ const itemVariants = {
 };
 
 const ProjectsPage = () => {
+
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const [showVideo, setShowVideo] = useState(true);
     const [showProjects, setShowProjects] = useState(false);
@@ -83,7 +86,7 @@ const ProjectsPage = () => {
                     exit="hidden"
                     variants={pageVariants}
                 >
-                    <h1>Mes Projets</h1>
+                    <h1>{t('pageProjectsTitle')}</h1>
                     <ul className="projects-list">
                         {projects.map((project, index) => (
                             <motion.li

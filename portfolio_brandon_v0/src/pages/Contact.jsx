@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 import "../styles/contact.css";
-import loadImages from "../assets/utils/imageLoader";
+import loadImages from "../utils/imageLoader";
 
 const aboutMeImages = loadImages("contact");
 
 const ContactForm = () => {
+
+    const { t } = useTranslation();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -94,7 +98,7 @@ const ContactForm = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
-                    Contactez-moi
+                    {t('pageContactTitle')}
                 </motion.h1>
 
                 <motion.form
@@ -109,13 +113,13 @@ const ContactForm = () => {
                         <p className="item-contact">Github</p>
                     </div>
 
-                    <label>Nom :</label>
+                    <label>{t('pageContactName')}</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
-                    <label>Email :</label>
+                    <label>{t('pageContactEmail')}</label>
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-                    <label>Message :</label>
+                    <label>{t('pageContactMessage')}</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
 
                     <motion.button
@@ -125,7 +129,7 @@ const ContactForm = () => {
                         whileTap={{ scale: 0.95 }}
                         transition={{ type: "spring", stiffness: 300 }}
                     >
-                        Envoyer
+                        {t('pageContactButtonSend')}
                     </motion.button>
                 </motion.form>
             </motion.div>

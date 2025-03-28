@@ -1,12 +1,15 @@
 ﻿import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import "../styles/home.css";
-import loadImages from "../assets/utils/imageLoader"; // Importe la fonction
+import loadImages from "../utils/imageLoader"; // Importe la fonction
 
 const homeImages = loadImages("home"); // Charge uniquement les images du dossier "home"
 
 const Home = () => {
+    const { t } = useTranslation();
+
     const [showBubblePC, setShowBubblePC] = useState(false); 
     const [showBubbleCoffee, setShowBubbleCoffee] = useState(false);
     const [showBubblePhone, setShowBubblePhone] = useState(false); 
@@ -30,8 +33,8 @@ const Home = () => {
                     src={homeImages["back.jpg"]}
                     alt="Back"
                     className="background-image" />
-                <h2 className="title">Welcome in my portfolio</h2>
-                <p className="text">Select an item on the menu</p>
+                <h2 className="title">{t('homeTitle')}</h2>
+                <p className="text">{t('homeText')}</p>
                 <motion.img
                     src={isCoffeeClicked ? homeImages["coffee_out.png"] : homeImages["coffee.png"]}
                     alt="Coffee"
@@ -57,7 +60,7 @@ const Home = () => {
                         alt="Dialogue_bubble_coffee"
                         className="dialogue-coffee"
                     />
-                    <p className="dialogue-coffee-text">About me, click here</p>
+                    <p className="dialogue-coffee-text">{t('homeDialogue')}</p>
                 </motion.div>
                 <motion.img
                     src={isPCClicked ? homeImages["pc_fire.png"] : homeImages["pc.png"]}

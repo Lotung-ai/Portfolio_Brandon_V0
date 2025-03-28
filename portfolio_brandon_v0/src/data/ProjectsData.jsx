@@ -1,4 +1,4 @@
-﻿import loadImages from "../assets/utils/imageLoader"; // Import du loader
+﻿import loadImages from "../utils/imageLoader"; // Import du loader
 
 const projects = [
     {

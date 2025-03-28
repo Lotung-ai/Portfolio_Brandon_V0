@@ -1,0 +1,26 @@
+{
+  "navBarItemAboutMe": "A mon sujet",
+  "navBarItemProjects": "Projets",
+  "navBarItemContact": "Contact",
+  "footerTitle": "MySite",
+  "footerCopyright": "All rights reserved.",
+  "footerAboutMe": "About Me",
+  "footerProjects": "Projets",
+  "footerContact": "Contact",
+  "homeTitle": "Welcome in portfolio",
+  "homeText": "Select an item on the menu",
+  "homeDialogue": "About me",
+  "pageAboutMeTitle": "About me",
+  "pageAboutMeDescription": "Hello, I am Brandon KU. I am a fullstack developer with a strong specialization in backend C#/.NET, while having solid skills in ReactJS for the frontend. Passionate about development and new technologies, I love learning, experimenting, and pushing boundaries to design high-performance and useful applications.",
+  "pageAboutMeContactTitle": "Contact",
+  "pageAboutMeTechnicalSkills": "Technical Skills",
+  "pageAboutMeTools": "Tools",
+  "pageAboutMeFrameworksAndLibraries": "Frameworks & Libraries",
+  "pageProjectsTitle": "My Projects",
+  "pageContactTitle": "Contact Me",
+  "pageContactName": "Name :",
+  "pageContactEmail": "Email :",
+  "pageContactMessage": "Message :",
+  "pageContactButtonSend": "Send"
+
+}
