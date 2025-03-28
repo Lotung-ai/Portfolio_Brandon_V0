@@ -13,6 +13,8 @@
     <Folder Include="src\assets\navbar\" />
     <Folder Include="src\assets\aboutme\" />
     <Folder Include="src\assets\animations\" />
+    <Folder Include="src\assets\contact\" />
     <Folder Include="src\assets\projects\project-1\" />
+    <Folder Include="src\styles\animations\" />
   </ItemGroup>
 </Project>
