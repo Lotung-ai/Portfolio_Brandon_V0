@@ -20,12 +20,11 @@ const itemVariants = {
         opacity: 1,
         transition: { delay: i * 0.1 + 0.5, duration: 0.5 },
     }),
-    hover: { scale: 1.1, color: "#4801FF", transition: { delay: 0.1, duration: 0.5 } },
-    unhover: { scale: 1, color: "#000", transition: { duration: 0 } }
+    hover: { scale: 1.1, color: "#FFF", transition: { delay: 0.1, duration: 0.5 } },
+    unhover: { scale: 1, color: "#FFF", transition: { duration: 0 } }
 };
 
 const ProjectsPage = () => {
-
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [showVideo, setShowVideo] = useState(true);
@@ -44,6 +43,12 @@ const ProjectsPage = () => {
         setShowProjects(true);
     };
 
+
+    const translatedProjects = projects.map(project => ({
+        ...project,
+        title: t(project.titleKey)
+    }));
+
     return (
         <motion.div onClick={skipAnimation} className="projects-wrapper">
             {/* Image de fond appliquée en arrière-plan après la vidéo */}
@@ -51,9 +56,9 @@ const ProjectsPage = () => {
                 src={loadImage["background-image-eva.png"]}
                 alt="Image de fond"
                 className="background-image-eva"
-                initial={{  opacity: 0 }}
-                animate={{  opacity: showVideo ? 0 : 1 }}
-                transition={{ duration: 2, ease: "easeOut", delay:0.4 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: showVideo ? 0 : 1 }}
+                transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
             />
 
             {/* Phase 1 : Lecture de la vidéo */}
@@ -88,7 +93,7 @@ const ProjectsPage = () => {
                 >
                     <h1>{t('pageProjectsTitle')}</h1>
                     <ul className="projects-list">
-                        {projects.map((project, index) => (
+                        {translatedProjects.map((project, index) => (
                             <motion.li
                                 key={project.id}
                                 custom={index}

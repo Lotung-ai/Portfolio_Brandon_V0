@@ -1,6 +1,7 @@
 ﻿import { motion, useInView } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 import projects from "../data/ProjectsData";
 import "../styles/projectdetails.css";
 import Footer from "../components/Footer";
@@ -10,7 +11,7 @@ const fadeInUp = {
     visible: (i) => ({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.4, ease: "easeOut", delay: i * 0.2 } // Décalage en cascade
+        transition: { duration: 0.4, ease: "easeOut", delay: i * 0.2 }
     })
 };
 
@@ -18,7 +19,7 @@ const fadeInContainer = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { staggerChildren: 0.2 } // Effet de cascade
+        transition: { staggerChildren: 0.2 }
     }
 };
 
@@ -29,6 +30,7 @@ const fadeInDown = {
 
 const ProjectDetails = () => {
     const { id } = useParams();
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const contentRef = useRef(null);
@@ -37,8 +39,9 @@ const ProjectDetails = () => {
     const contentInView = useInView(contentRef, { once: true, margin: "-150px 0px" });
     const imageSmallInView = useInView(imageSmallRef, { once: true, margin: "-100px 0px" });
 
-    const project = projects.find((p) => p.id === id);
-    if (!project) return <h2>Projet non trouvé</h2>;
+    // Convertir l'ID en nombre pour éviter les erreurs
+    const project = projects.find((p) => p.id.toString() === id);
+    if (!project) return <h2>{t("projectNotFound")}</h2>;
 
     return (
         <div className="project-details">
@@ -54,7 +57,7 @@ const ProjectDetails = () => {
 
                 <motion.img
                     src={project.image_top}
-                    alt={project.title}
+                    alt={t(project.titleKey)}
                     className="project-image"
                     initial="hidden"
                     animate="visible"
@@ -70,7 +73,7 @@ const ProjectDetails = () => {
                     animate="visible"
                     variants={fadeInDown}
                 >
-                    {project.title}
+                    {t(project.titleKey)}
                 </motion.h2>
             </div>
 
@@ -80,18 +83,18 @@ const ProjectDetails = () => {
                 className="text-container"
                 initial="hidden"
                 animate={contentInView ? "visible" : "hidden"}
-                variants={fadeInContainer} // Stagger effect
+                variants={fadeInContainer}
             >
                 <motion.div className="text-box" custom={0} variants={fadeInUp}>
-                    {project.technologie}
+                    {t(project.technologieKey)}
                 </motion.div>
 
                 <motion.div className="text-box" custom={1} variants={fadeInUp}>
-                    {project.achitecture}
+                    {t(project.architectureKey)}
                 </motion.div>
 
                 <motion.div className="text-box full-width" custom={2} variants={fadeInUp}>
-                    {project.description}
+                    {t(project.descriptionKey)}
                 </motion.div>
             </motion.div>
 
@@ -99,7 +102,7 @@ const ProjectDetails = () => {
             <motion.img
                 ref={imageSmallRef}
                 src={project.image}
-                alt={project.title}
+                alt={t(project.titleKey)}
                 className="project-image-small"
                 initial="hidden"
                 animate={imageSmallInView ? "visible" : "hidden"}

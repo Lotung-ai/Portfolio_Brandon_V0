@@ -2,7 +2,7 @@
 import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import FloatingDownloadButton from "./components/FloatingDownloadButton";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
@@ -38,7 +38,7 @@ const App = () => {
         <Router>
             <ScrollToTop />
             <Navbar />
-            <Sidebar />
+            <FloatingDownloadButton />
             <AnimatedRoutes />
         </Router>
     );

@@ -21,6 +21,15 @@
   "pageContactName": "Name :",
   "pageContactEmail": "Email :",
   "pageContactMessage": "Message :",
-  "pageContactButtonSend": "Send"
+  "pageContactButtonSend": "Send",
+  "projects": {
+    "microservices": {
+      "title": "MicroServices",
+      "technologie": "Technology: C#, ASP.NET, Identity, JWT Token, Swagger, Ocelot, SQL Server, MongoDB, Docker",
+      "description": "The goal is to create a MicroServices application that allows authorized users to create and manage patient data while ensuring their follow-up.\n\nA reporting system will be implemented to alert users when a patient is at risk of diabetes.\n\nThe application consists of multiple services:\n- **MicroFrontEnd**: Manages the views.\n- **MicroServiceAuth**: Handles authentication.\n- **MicroServiceSQL**: Stores and manages SQL patient data.\n- **MicroServiceNote**: Stores and manages NoSQL patient data.\n- **MicroServiceReport**: Handles alerts when a patient is at risk of diabetes.\n- **OcelotAPIGw**: Acts as a gateway between services.",
+      "architecture": "Architecture: MicroServices, with each service managed by a dedicated application, and OcelotAPIGw enabling communication between them."
+
+    }
+  }
 
 }

@@ -5,22 +5,30 @@
   "footerTitle": "MySite",
   "footerCopyright": "All rights reserved.",
   "footerAboutMe": "About Me",
-  "footerProjects": "Projets",
+  "footerProjects": "Projects",
   "footerContact": "Contact",
-  "homeTitle": "Welcome in portfolio",
-  "homeText": "Select an item on the menu",
-  "homeDialogue": "About me",
-  "pageAboutMeTitle": "About me",
-  "pageAboutMeDescription": "Hello, I am Brandon KU. I am a fullstack developer with a strong specialization in backend C#/.NET, while having solid skills in ReactJS for the frontend. Passionate about development and new technologies, I love learning, experimenting, and pushing boundaries to design high-performance and useful applications.",
+  "homeTitle": "Welcome to my portfolio",
+  "homeText": "Select an item from the menu",
+  "homeDialogue": "About Me",
+  "pageAboutMeTitle": "About Me",
+  "pageAboutMeDescription": "Hello, I am Brandon KU. I am a full-stack developer with a strong specialization in backend development with C#/.NET, while also having solid skills in ReactJS for frontend development. Passionate about coding and new technologies, I love learning, experimenting, and pushing boundaries to design high-performance and useful applications.",
   "pageAboutMeContactTitle": "Contact",
   "pageAboutMeTechnicalSkills": "Technical Skills",
   "pageAboutMeTools": "Tools",
   "pageAboutMeFrameworksAndLibraries": "Frameworks & Libraries",
   "pageProjectsTitle": "My Projects",
   "pageContactTitle": "Contact Me",
-  "pageContactName": "Name :",
-  "pageContactEmail": "Email :",
-  "pageContactMessage": "Message :",
-  "pageContactButtonSend": "Send"
+  "pageContactName": "Name:",
+  "pageContactEmail": "Email:",
+  "pageContactMessage": "Message:",
+  "pageContactButtonSend": "Send",
+    "projects": {
+      "microservices": {
+        "title": "MicroServices",
+        "technologie": "Technology: C#, ASP.NET, Identity, JWT Token, Swagger, Ocelot, SQL Server, MongoDB, Docker",
+        "description": "The goal is to create a MicroServices application that allows authorized users to create and manage patient data while ensuring their follow-up.\n\nA reporting system will be implemented to alert users when a patient is at risk of diabetes.\n\nThe application consists of multiple services:\n- **MicroFrontEnd**: Manages the views.\n- **MicroServiceAuth**: Handles authentication.\n- **MicroServiceSQL**: Stores and manages SQL patient data.\n- **MicroServiceNote**: Stores and manages NoSQL patient data.\n- **MicroServiceReport**: Handles alerts when a patient is at risk of diabetes.\n- **OcelotAPIGw**: Acts as a gateway between services.",
+        "architecture": "Architecture: MicroServices, with each service managed by a dedicated application, and OcelotAPIGw enabling communication between them."
 
+      }
+    }
 }
