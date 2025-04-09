@@ -24,11 +24,31 @@
   "pageContactButtonSend": "Send",
     "projects": {
       "microservices": {
-        "title": "MicroServices",
-        "technologie": "Technology: C#, ASP.NET, Identity, JWT Token, Swagger, Ocelot, SQL Server, MongoDB, Docker",
-        "description": "The goal is to create a MicroServices application that allows authorized users to create and manage patient data while ensuring their follow-up.\n\nA reporting system will be implemented to alert users when a patient is at risk of diabetes.\n\nThe application consists of multiple services:\n- **MicroFrontEnd**: Manages the views.\n- **MicroServiceAuth**: Handles authentication.\n- **MicroServiceSQL**: Stores and manages SQL patient data.\n- **MicroServiceNote**: Stores and manages NoSQL patient data.\n- **MicroServiceReport**: Handles alerts when a patient is at risk of diabetes.\n- **OcelotAPIGw**: Acts as a gateway between services.",
-        "architecture": "Architecture: MicroServices, with each service managed by a dedicated application, and OcelotAPIGw enabling communication between them."
-
+        "titleKey": "Microservices",
+        "introKey": "projects.microservices.intro",
+        "titleTechnologieKey": "projects.microservices.titleTechnologie",
+        "detailTechnologieKey": "projects.microservices.detailTechnologie",
+        "titleArchitectureKey": "projects.microservices.titleArchitecture",
+        "detailArchitectureKey": "projects.microservices.detailArchitecture",
+        "titleContainerKey": "projects.microservices.titleContainer",
+        "detailContainerKey": "projects.microservices.detailContainer",
+        "titlelAutKey": "projects.microservices.titleAut",
+        "detailAutKey": "projects.microservices.detailAut",
+        "titlelFrontKey": "projects.microservices.titleFront",
+        "detailFrontKey": "projects.microservices.detailFront",
+        "titlelPatientKey": "projects.microservices.titlePatient",
+        "detailPatientKey": "projects.microservices.detailPatient",
+        "titlelNoteKey": "projects.microservices.titleNote",
+        "detailNoteKey": "projects.microservices.detailNote",
+        "titlelReportKey": "projects.microservices.titleReport",
+        "detailReportKey": "projects.microservices.detailReport",
+        "titlelGatewayKey": "projects.microservices.titleGateway",
+        "detailGatewayKey": "projects.microservices.detailGateway",
+        "titleDockerKey": "projects.microservices.titleDocker",
+        "detailDockerKey": "projects.microservices.detailDocker",
+        "titleChallengeKey": "projects.microservices.titleChallenge",
+        "detailChallengeKey": "projects.microservices.detailChallenge",
+        "linkKey": "projects.microservices.link"
       }
     }
 }

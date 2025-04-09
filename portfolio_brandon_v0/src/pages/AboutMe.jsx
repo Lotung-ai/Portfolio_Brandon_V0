@@ -21,9 +21,6 @@ const AboutMe = () => {
     return (
         <motion.div
             className="about-me-container"
-            initial={{ backgroundColor: "#4801FF" }}
-            animate={{ backgroundColor: "#000" }}
-            transition={{ duration: 0.5 }}
         >
             <motion.h1
                 className="introduction-section"

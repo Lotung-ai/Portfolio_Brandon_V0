@@ -5,6 +5,9 @@ import { useTranslation } from 'react-i18next';
 import projects from "../data/ProjectsData";
 import "../styles/projectdetails.css";
 import Footer from "../components/Footer";
+import loadImages from "../utils/imageLoader";
+
+const loadImage = loadImages("projects");
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -34,14 +37,19 @@ const ProjectDetails = () => {
     const navigate = useNavigate();
 
     const contentRef = useRef(null);
-    const imageSmallRef = useRef(null);
+    const diagramRef = useRef(null);
+    const secondBlockRef = useRef(null);
 
     const contentInView = useInView(contentRef, { once: true, margin: "-150px 0px" });
-    const imageSmallInView = useInView(imageSmallRef, { once: true, margin: "-100px 0px" });
+    const diagramInView = useInView(diagramRef, { once: true, margin: "-150px 0px" });
+    const secondBlockInView = useInView(secondBlockRef, { once: true, margin: "-150px 0px" });
 
-    // Convertir l'ID en nombre pour éviter les erreurs
+
     const project = projects.find((p) => p.id.toString() === id);
     if (!project) return <h2>{t("projectNotFound")}</h2>;
+
+    const challenges = t(project.listChallengeKey, { returnObjects: true });
+    const solutions = t(project.listSolutionKey, { returnObjects: true });
 
     return (
         <div className="project-details">
@@ -57,7 +65,6 @@ const ProjectDetails = () => {
 
                 <motion.img
                     src={project.image_top}
-                    alt={t(project.titleKey)}
                     className="project-image"
                     initial="hidden"
                     animate="visible"
@@ -75,9 +82,21 @@ const ProjectDetails = () => {
                 >
                     {t(project.titleKey)}
                 </motion.h2>
+                <motion.div
+                    className="box-intro"
+                >
+                <motion.p
+                    className="project-intro"
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInDown}
+                >
+                    {t(project.introKey)}
+                    </motion.p>
+                    <a className="project-link" href={project.link}>{t(project.linkKey)}</a>
+                </motion.div>
             </div>
 
-            {/* Conteneur texte avec animation en cascade */}
             <motion.div
                 ref={contentRef}
                 className="text-container"
@@ -85,30 +104,77 @@ const ProjectDetails = () => {
                 animate={contentInView ? "visible" : "hidden"}
                 variants={fadeInContainer}
             >
-                <motion.div className="text-box" custom={0} variants={fadeInUp}>
-                    {t(project.technologieKey)}
-                </motion.div>
-
-                <motion.div className="text-box" custom={1} variants={fadeInUp}>
-                    {t(project.architectureKey)}
-                </motion.div>
-
-                <motion.div className="text-box full-width" custom={2} variants={fadeInUp}>
-                    {t(project.descriptionKey)}
-                </motion.div>
+                {/* Trois premières box animées */}
+                {[0, 1, 2].map((index) => (
+                    <motion.div className="box" custom={index} variants={fadeInUp} key={index}>
+                        <img className="fleche" src={loadImage["fleche.png"]} alt="fleche" />
+                        <motion.div className="title-box" custom={index} variants={fadeInUp}>
+                            {t(project[`title${["Technologie", "Architecture", "Container"][index]}Key`])}
+                        </motion.div>
+                        <motion.div className="text-box" custom={index} variants={fadeInUp}>
+                            {t(project[`detail${["Technologie", "Architecture", "Container"][index]}Key`])}
+                        </motion.div>
+                    </motion.div>
+                ))}
             </motion.div>
 
-            {/* Deuxième image */}
             <motion.img
-                ref={imageSmallRef}
-                src={project.image}
-                alt={t(project.titleKey)}
-                className="project-image-small"
+                ref={diagramRef}
+                src={project.image_diagram}
+                className="project-image-diagram"
                 initial="hidden"
-                animate={imageSmallInView ? "visible" : "hidden"}
+                animate={diagramInView ? "visible" : "hidden"}
                 variants={fadeInUp}
                 custom={3}
             />
+
+            <motion.div
+                ref={secondBlockRef}
+                className="text-container"
+                initial="hidden"
+                animate={secondBlockInView ? "visible" : "hidden"}
+                variants={fadeInContainer}
+            >
+                {[
+                    "Aut", "Front", "Patient", "Note", "Report", "Gateway", "Docker"
+                ].map((sectionKey, i) => (
+                    <motion.div className="box" custom={i} variants={fadeInUp} key={sectionKey}>
+                        <motion.div className="title-box" custom={i} variants={fadeInUp}>
+                            {t(project[`title${sectionKey}Key`])}
+                        </motion.div>
+                        <motion.div className="text-box" custom={i} variants={fadeInUp}>
+                            {t(project[`detail${sectionKey}Key`])}
+                        </motion.div>
+                    </motion.div>
+                ))}
+            </motion.div>
+        
+            <motion.div
+                className="list-section"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={fadeInContainer}
+            >
+                <motion.h2 className="list-title" variants={fadeInUp}>{t(project.titleChallengeKey) }</motion.h2>
+                <ul className="list-challenge">
+                    {challenges.map((c, i) => (
+                        <motion.li key={i} className="item-challenge" custom={i} variants={fadeInUp}>
+                            {c}
+                        </motion.li>
+                    ))}
+                </ul>
+
+                <motion.h2 className="list-title" variants={fadeInUp}>{t(project.titleSolutionKey)}</motion.h2>
+                <ul className="list-solution">
+                    {solutions.map((s, i) => (
+                        <motion.li key={i} className="item-solution" custom={i} variants={fadeInUp}>
+                            {s}
+                        </motion.li>
+                    ))}
+                </ul>
+            </motion.div>
+
         </div>
     );
 };

@@ -1,35 +1,73 @@
 {
-  "navBarItemAboutMe": "A mon sujet",
+  "navBarItemAboutMe": "À propos de moi",
   "navBarItemProjects": "Projets",
   "navBarItemContact": "Contact",
-  "footerTitle": "MySite",
-  "footerCopyright": "All rights reserved.",
-  "footerAboutMe": "About Me",
+  "footerTitle": "MonSite",
+  "footerCopyright": "Tous droits réservés.",
+  "footerAboutMe": "À propos de moi",
   "footerProjects": "Projets",
   "footerContact": "Contact",
-  "homeTitle": "Welcome in portfolio",
-  "homeText": "Select an item on the menu",
-  "homeDialogue": "About me",
-  "pageAboutMeTitle": "About me",
-  "pageAboutMeDescription": "Hello, I am Brandon KU. I am a fullstack developer with a strong specialization in backend C#/.NET, while having solid skills in ReactJS for the frontend. Passionate about development and new technologies, I love learning, experimenting, and pushing boundaries to design high-performance and useful applications.",
+  "homeTitle": "Bienvenue dans mon portfolio",
+  "homeText": "Sélectionnez un élément dans le menu",
+  "homeDialogue": "À propos de moi",
+  "pageAboutMeTitle": "À propos de moi",
+  "pageAboutMeDescription": "Bonjour, je suis Brandon KU. Je suis un développeur full-stack spécialisé backend avec C#/.NET, tout en ayant de solides compétences en ReactJS pour le développement frontend. Passionné par la programmation et les nouvelles technologies, j'adore apprendre, expérimenter et repousser mes limites pour concevoir des applications performantes et utiles.",
   "pageAboutMeContactTitle": "Contact",
-  "pageAboutMeTechnicalSkills": "Technical Skills",
-  "pageAboutMeTools": "Tools",
-  "pageAboutMeFrameworksAndLibraries": "Frameworks & Libraries",
-  "pageProjectsTitle": "My Projects",
-  "pageContactTitle": "Contact Me",
-  "pageContactName": "Name :",
+  "pageAboutMeTechnicalSkills": "Compétences techniques",
+  "pageAboutMeTools": "Outils",
+  "pageAboutMeFrameworksAndLibraries": "Frameworks et bibliothèques",
+  "pageProjectsTitle": "Mes projets",
+  "pageContactTitle": "Contactez-moi",
+  "pageContactName": "Nom :",
   "pageContactEmail": "Email :",
   "pageContactMessage": "Message :",
-  "pageContactButtonSend": "Send",
+  "pageContactButtonSend": "Envoyer",
+
+  "projectNotFound": "Projet non trouvé",
   "projects": {
     "microservices": {
-      "title": "MicroServices",
-      "technologie": "Technology: C#, ASP.NET, Identity, JWT Token, Swagger, Ocelot, SQL Server, MongoDB, Docker",
-      "description": "The goal is to create a MicroServices application that allows authorized users to create and manage patient data while ensuring their follow-up.\n\nA reporting system will be implemented to alert users when a patient is at risk of diabetes.\n\nThe application consists of multiple services:\n- **MicroFrontEnd**: Manages the views.\n- **MicroServiceAuth**: Handles authentication.\n- **MicroServiceSQL**: Stores and manages SQL patient data.\n- **MicroServiceNote**: Stores and manages NoSQL patient data.\n- **MicroServiceReport**: Handles alerts when a patient is at risk of diabetes.\n- **OcelotAPIGw**: Acts as a gateway between services.",
-      "architecture": "Architecture: MicroServices, with each service managed by a dedicated application, and OcelotAPIGw enabling communication between them."
+      "title": "Microservices",
+      "intro": "L'objectif est de créer une application basée sur une architecture MicroServices permettant aux utilisateurs autorisés de créer et de gérer les données des patients tout en assurant leur suivi. Un système de reporting sera mis en place pour alerter les utilisateurs lorsqu'un patient présente un risque de diabète.",
+      "titleTechnologie": "Technologies",
+      "detailTechnologie": "Frameworks et bases de données utilisés : .NET, ASP.NET, Entity Framework, SQL Server, MongoDB, Ocelot.",
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "Architecture en microservices pour une meilleure scalabilité et modularité.",
+      "titleContainer": "Conteneurisation",
+      "detailContainer": "Utilisation de Docker pour l’isolation et le déploiement des services.",
+      "titleAut": "MicroServiceAuth",
+      "detailAut": "Gère l'authentification et l'autorisation des utilisateurs via des jetons JWT. Il assure la sécurité et valide les accès aux autres services.",
+
+      "titleFront": "MicroFrontEnd",
+      "detailFront": "Responsable de l'interface utilisateur, il affiche les données des services et offre une expérience fluide et réactive.",
+
+      "titlePatient": "MicroServiceSQL",
+      "detailPatient": "Stocke les données structurées des patients dans SQL Server, gérant les informations personnelles et médicales.",
+
+      "titleNote": "MicroServiceNote",
+      "detailNote": "Stocke les notes des patients dans MongoDB, permettant de gérer des données non structurées comme les commentaires médicaux.",
+
+      "titleReport": "MicroServiceReport",
+      "detailReport": "Analyse les données des patients pour détecter les risques de diabète et alerter les utilisateurs sur les patients à risque.",
+
+      "titleGateway": "OcelotAPIGw",
+      "detailGateway": "Centralise les requêtes des clients et les dirige vers les microservices appropriés tout en garantissant la sécurité et la scalabilité.",
+
+      "titleDocker": "Container",
+      "detailDocker": "Utilise Docker pour containeriser les microservices, permettant une gestion et un déploiement flexible des services.",
+      "titleChallenge": "Les défis techniques",
+      "listChallenge": [
+        "Implémenter une architecture microservices",
+        "Transmission sécuriée des autorisations",
+        "Dockerisation et orchestration des services"
+      ],
+      "titleSolution": "Les solutions apportées",
+      "listSolution": [
+        "Utilisation d'Ocelot comme passerelle API",
+        "Transfert d'autorisation via cookies JWT",
+        "Orchestration via Docker Compose"
+      ],
+      "link": "Voir le code source"
 
     }
   }
-
 }

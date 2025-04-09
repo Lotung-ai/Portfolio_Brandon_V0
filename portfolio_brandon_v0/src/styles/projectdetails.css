@@ -2,10 +2,11 @@
 .project-details {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Permet aux enfants de prendre toute la largeur */
+    align-items: center; /* Permet aux enfants de prendre toute la largeur */
     position: relative; /* Permet de positionner le titre par-dessus l’image */
     padding-bottom: 100px;
 }
+
 .back-button {
     position: absolute;
     top: 20px;
@@ -31,20 +32,28 @@
         color: white; /* Assure que la flèche reste blanche */
     }
 /* Conteneur de l’image */
-.image-container {
+.image-container, .project-image-diagram {
     position: relative; /* Permet au titre de se positionner par-dessus */
     width: 100%; /* L'image prend toute la largeur */
 }
+
+.project-link {
+    color: #9C27B0;
+    margin: 10px;
+}
+
+    .project-link:hover {
+        color: #00FF9D;
+    }
 /* Image principale sans marge */
 .project-image {
     width: 100%;
     height: auto;
     max-height: 600px;
     object-fit: cover;
-    object-position:top;/* Laisse la hauteur s'adapter */
+    object-position: top; /* Laisse la hauteur s'adapter */
 }
 
-/* Titre positionné en haut à droite */
 .project-title {
     position: absolute;
     top: 1px; /* Distance du haut */
@@ -55,47 +64,92 @@
     text-stroke: 0.1px #FFF; /* Contour pour navigateurs modernes */
     text-transform: uppercase; /* Mettre en majuscules (optionnel) */
 }
-/* Conteneur des textes */
-.text-container {
-    color: black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+
+.box-intro {
+    position: absolute;
     width: 100%;
-    max-width: 1200px; /* Définition d'une largeur maximale */
-    margin: 20px auto; /* Centre horizontalement */
-    /* Ajoute un peu d’espace sur les côtés */
+    bottom: 5%;
+    width: 60%;
+    border: 1px solid #00FF9D;
+    background-color: #1E0631;
 }
 
-/* Deux textes côte à côte avec une hauteur minimale */
-.text-box {
-    background: #f4f4f4;
-    padding: 15px;
-    text-align: center;
-    min-height: 150px; /* Hauteur minimale */
+.project-intro {
+    width: 100%;
+    margin: 10px;
+}
+
+.text-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    margin: 10px;
 }
-/* Troisième texte en pleine largeur */
-.full-width {
-    grid-column: span 2;
-}
-/* Image secondaire */
-.project-image-small {
-    width: 100%; 
-    max-width: 500px;
-    margin: 20px auto 0;
-    border-radius: 10px;
-    display: block;
-}
-/* Responsive */
-@media (max-width: 768px) {
-    .text-container {
-        grid-template-columns: 1fr; 
-    }
 
-    .full-width {
-        grid-column: span 1;
-    }
+.box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 180px;
+    margin: 10px 0px;
+    border: 1px solid #00FF9D;
+    background-color: #1E0631;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fleche {
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+.title-box {
+    font-weight: bold;
+    color: #9C27B0;
+}
+
+.text-box {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    flex-grow: 1;
+    align-items: center;
+    text-align: justify;
+    margin: 10px;
+}
+
+.list-section {
+    background-color: #2A0A45;
+    border: 1px solid #00FF9D;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.list-title {
+    color: #9C27B0;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.list-challenge, .list-solution {
+    list-style-type: disc;
+    padding-left: 30px;
+    color: white;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    margin-bottom: 30px;
+}
+
+.item-challenge, .item-solution {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.project-intro, .project-link, .title-box {
+    font-size: clamp(1rem, 1.5vw, 2rem);
 }
