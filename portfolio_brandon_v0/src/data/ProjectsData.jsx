@@ -5,7 +5,7 @@ const loadImage = loadImages("projects");
 
 const projects = [
     {
-        id: "projet-0",
+        id: "project-00",
         titleKey: "projects.microservices.title",
         introKey: "projects.microservices.intro",
         titleTechnologieKey: "projects.microservices.titleTechnologie",
@@ -39,7 +39,7 @@ const projects = [
         link: "/projects/Project1"
     },
     {
-        id: "projet-1",
+        id: "project-01",
         titleKey: "projects.apiRestful.title",
         technologieKey: "projects.apiRestful.technologie",
         architectureKey: "projects.apiRestful.architecture",
@@ -49,7 +49,7 @@ const projects = [
         link: "/projects/Project1"
     },
     {
-        id: "projet-2",
+        id: "project-02",
         titleKey: "projects.expressVoiture.title",
         technologieKey: "projects.expressVoiture.technologie",
         architectureKey: "projects.expressVoiture.architecture",

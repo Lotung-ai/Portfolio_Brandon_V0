@@ -13,6 +13,10 @@
   "pageAboutMeTitle": "À propos de moi",
   "pageAboutMeDescription": "Bonjour, je suis Brandon KU. Je suis un développeur full-stack spécialisé backend avec C#/.NET, tout en ayant de solides compétences en ReactJS pour le développement frontend. Passionné par la programmation et les nouvelles technologies, j'adore apprendre, expérimenter et repousser mes limites pour concevoir des applications performantes et utiles.",
   "pageAboutMeContactTitle": "Contact",
+  "pageAboutMeTopProject": "Projets",
+  "pageAboutMeTopProject00": "Microservices",
+  "pageAboutMeTopProject01": "ExpressVoiture",
+  "pageAboutMeTopProject02": "Portfolio",
   "pageAboutMeTechnicalSkills": "Compétences techniques",
   "pageAboutMeTools": "Outils",
   "pageAboutMeFrameworksAndLibraries": "Frameworks et bibliothèques",
@@ -21,8 +25,6 @@
   "pageContactName": "Nom :",
   "pageContactEmail": "Email :",
   "pageContactMessage": "Message :",
-  "pageContactButtonSend": "Envoyer",
-
   "projectNotFound": "Projet non trouvé",
   "projects": {
     "microservices": {

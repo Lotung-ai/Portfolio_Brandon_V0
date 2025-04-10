@@ -3,7 +3,6 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FloatingDownloadButton from "./components/FloatingDownloadButton";
-import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
@@ -11,6 +10,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Contact from "./pages/Contact";
 import "./styles/App.css";
 import './utils/i18n';
+import ScrollToTop from "./utils/ScrollToTop";
 
 const AnimatedRoutes = () => {
     const location = useLocation();

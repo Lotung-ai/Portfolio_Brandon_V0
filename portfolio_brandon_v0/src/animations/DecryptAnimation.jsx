@@ -3,7 +3,7 @@ const kanjis = "私について"; // 🔹 Kanjis intégrés dans l'effet de déc
 
 const DecryptAnimation = (finalText, setDisplayText, duration) => {
     let iterations = 0;
-    const intervalTime = duration * 1000 / finalText.length; // Temps de transition par lettre
+    const intervalTime = duration * 900 / finalText.length; // Temps de transition par lettre
 
     let currentText = Array(finalText.length).fill(" "); // Commence vide
     let interval = setInterval(() => {

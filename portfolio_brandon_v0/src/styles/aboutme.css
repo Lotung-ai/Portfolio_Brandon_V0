@@ -10,7 +10,6 @@
     padding: 2rem 0;
 }
 
-/* Image de profil */
 .profile-image-container {
     position: relative;
     display: flex;
@@ -34,12 +33,11 @@
     height: 100%;
 }
 
-/* Section description */
 .description-text {
     position: absolute;
     top: 63%;
-    width: 64%;
-    max-width: 500px;
+    width: 65%;
+    max-width: 800px;
     color: #AD00FE;
     background-color: black;
     text-align: justify;
@@ -47,25 +45,7 @@
     margin-left: 4rem;
     z-index: 3;
 }
-
-/* Section contact */
-.contact-section {
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    margin-bottom: 2rem;
-    z-index: 1;
-}
-
-.contact-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    justify-content: center;
-}
-
-/* Galerie d'images */
-.image-gallery-section {
+.gallery-section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -78,46 +58,3 @@
     opacity: 0.3;
     width: 600px;
 }
-
-.gallery-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.gallery-items {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-/* Galerie skills, tools, frameworks */
-.gallery-skills, .gallery-tools, .gallery-frameworks {
-    display: grid;
-    gap: 10px;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px;
-}
-
-.gallery-skills {
-    grid-template-columns: repeat(3, minmax(80px, 1fr));
-}
-
-.gallery-tools {
-    grid-template-columns: repeat(4, minmax(80px, 1fr));
-}
-
-.gallery-frameworks {
-    grid-template-columns: repeat(4, minmax(80px, 1fr));
-}
-
-.logo-image {
-    width: 80px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
