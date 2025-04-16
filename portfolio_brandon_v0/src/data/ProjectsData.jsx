@@ -74,14 +74,38 @@ const projects = [
     },
     {
         id: "project-02",
-        titleKey: "projects.expressVoiture.title",
-        technologieKey: "projects.expressVoiture.technologie",
-        architectureKey: "projects.expressVoiture.architecture",
-        descriptionKey: "projects.expressVoiture.description",
-        image_top: loadImage["project1_top.png"], // Chargement via le loader
-        image: loadImage["project1.png"], // Chargement via le loader
-        link: "/projects/Project1"
-    }
+        titleKey: "projects.apiRest.title",
+        introKey: "projects.apiRest.intro",
+        titleTechnologieKey: "projects.apiRest.titleTechnologie",
+        detailTechnologieKey: "projects.apiRest.detailTechnologie",
+        titleArchitectureKey: "projects.apiRest.titleArchitecture",
+        detailArchitectureKey: "projects.apiRest.detailArchitecture",
+        titleContainerKey: "projects.apiRest.titleContainer",
+        detailContainerKey: "projects.apiRest.detailContainer",
+        titleService01Key: "projects.apiRest.titleAut",
+        detailService01Key: "projects.apiRest.detailAut",
+        titleService02Key: "projects.apiRest.titleFront",
+        detailService02Key: "projects.apiRest.detailFront",
+        titleService03Key: "projects.apiRest.titleGestionVehicule",
+        detailService03Key: "projects.apiRest.detailGestionVehicule",
+        titleService04Key: "projects.apiRest.titleGestionVente",
+        detailService04Key: "projects.apiRest.detailGestionVente",
+        titleService05Key: "projects.apiRest.titleSecurity",
+        detailService05Key: "projects.apiRest.detailSecurity",
+        titleService06Key: "projects.apiRest.titleAzure",
+        detailService06Key: "projects.apiRest.detailAzure",
+        titleService07Key: "projects.apiRest.titleUI",
+        detailService07Key: "projects.apiRest.detailUI",
+        titleChallengeKey: "projects.apiRest.titleChallenge",
+        listChallengeKey: "projects.apiRest.listChallenge",
+        titleSolutionKey: "projects.apiRest.titleSolution",
+        listSolutionKey: "projects.apiRest.listSolution",
+        linkKey: "projects.apiRest.link",
+        image_diagram: loadImages("projects/project-2")["diagram.png"],
+        image_top: loadImages("projects/project-2")["express_top.png"],
+        image: loadImages("projects/project-2")["express.png"],
+        link: "/projects/ExpressVoitures"
+    },
 ];
 
 export default projects;

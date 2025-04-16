@@ -45,9 +45,7 @@ const ProjectDetails = () => {
     const diagramInView = useInView(diagramRef, { once: true, margin: "-150px 0px" });
     const secondBlockInView = useInView(secondBlockRef, { once: true, margin: "-150px 0px" });
 
-    const techs = ["Technologie", "Architecture", "Container"];
-    const services2 = ["Service01", "Service02", "Service03", "Service04", "Service05", "Service06", "Service07"];
-    
+    const techs = ["Technologie", "Architecture", "Container"];   
 
     const project = projects.find((p) => p.id.toString() === id);
     if (!project) return <h2>{t("projectNotFound")}</h2>;

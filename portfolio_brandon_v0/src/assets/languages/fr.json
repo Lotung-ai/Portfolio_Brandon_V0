@@ -120,6 +120,53 @@
       ],
 
       "link": "Voir le projet en ligne"
+    },
+    "apiRest": {
+      "title": "API REST - Gestion de base de données",
+      "intro": "API REST est une application backend développée avec ASP.NET Core, utilisant l'approche Code-First d'Entity Framework pour gérer une base de données SQL Server. Elle propose une architecture RESTful sécurisée grâce aux rôles et tokens JWT.",
+
+      "titleTechnologie": "Technologies utilisées",
+      "detailTechnologie": "ASP.NET Core, Entity Framework Core (Code-First), SQL Server, JWT (JSON Web Token) pour l’authentification et l’autorisation, Microsoft SQL Server Management Studio (SSMS).",
+
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "Architecture RESTful avec séparation des responsabilités entre contrôleurs, services et accès aux données (repositories).",
+
+      "titleContainer": "Conteneurisation",
+      "detailContainer": "Non spécifiée pour ce projet.",
+
+      "titleAut": "Authentification & Autorisation",
+      "detailAut": "Système d’authentification basé sur JWT. Les utilisateurs reçoivent un token après identification, et leurs accès sont contrôlés selon des rôles prédéfinis.",
+
+      "titleSecurity": "Sécurité des accès",
+      "detailSecurity": "Utilisation des tokens JWT pour sécuriser les communications entre le client et l’API. Gestion des rôles pour restreindre l’accès aux endpoints critiques.",
+
+      "titleEntities": "Gestion des entités",
+      "detailEntities": "Implémentation des opérations CRUD (Create, Read, Update, Delete) pour les entités définies dans le modèle de données.",
+
+      "titleSQL": "Connexion à la base de données",
+      "detailSQL": "Configuration de la chaîne de connexion avec SQL Server pour une persistance fiable des données.",
+
+      "titleEntityFramework": "Migrations de base de données",
+      "detailEntityFramework": "Utilisation d'Entity Framework Core pour la création et l’application des migrations. Synchronisation entre modèle C# et base SQL.",
+
+      "titleChallenge": "Défis rencontrés",
+      "listChallenge": [
+        "Mise en place de l’authentification sécurisée avec JWT",
+        "Gestion fine des autorisations via rôles utilisateur",
+        "Synchronisation fiable des migrations Entity Framework avec SQL Server",
+        "Structuration claire et maintenable de l'API REST"
+      ],
+
+      "titleSolution": "Solutions apportées",
+      "listSolution": [
+        "Utilisation de JWT pour sécuriser l’API sans état",
+        "Mise en place d’un système de rôles pour gérer l'accès aux ressources",
+        "Adoption d’une architecture RESTful bien découpée en couches (contrôleurs, services, repositories)",
+        "Configuration propre des migrations et gestion de la base de données via Entity Framework"
+      ],
+
+      "link": "https://github.com/Lotung-ai/APIRest"
     }
+
   }
 }

@@ -1,6 +1,5 @@
 ﻿import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import "../styles/projects.css";
 import projects from "../data/ProjectsData";
@@ -27,7 +26,7 @@ const itemVariants = {
 const ProjectsPage = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const [showVideo, setShowVideo] = useState(true);
+    /*const [showVideo, setShowVideo] = useState(true);
     const [showProjects, setShowProjects] = useState(false);
 
     useEffect(() => {
@@ -41,7 +40,7 @@ const ProjectsPage = () => {
     const skipAnimation = () => {
         setShowVideo(false);
         setShowProjects(true);
-    };
+    };*/
 
 
     const translatedProjects = projects.map(project => ({
@@ -50,19 +49,19 @@ const ProjectsPage = () => {
     }));
 
     return (
-        <motion.div onClick={skipAnimation} className="projects-wrapper">
+        <motion.div className="projects-wrapper">
             {/* Image de fond appliquée en arrière-plan après la vidéo */}
             <motion.img
                 src={loadImage["background-image-eva.png"]}
                 alt="Image de fond"
                 className="background-image-eva"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: showVideo ? 0 : 1 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
             />
 
             {/* Phase 1 : Lecture de la vidéo */}
-            {showVideo && (
+            {/* {showVideo && (
                 <div className="animation-container">
                     <motion.video
                         src={loadImage["look_eva.mp4"]}
@@ -80,10 +79,10 @@ const ProjectsPage = () => {
                         }}
                     />
                 </div>
-            )}
+            )}*/}
 
             {/* Phase 3 : Contenu des projets avec animation après la vidéo */}
-            {showProjects && (
+             
                 <motion.div
                     className="projects-container"
                     initial="hidden"
@@ -109,7 +108,7 @@ const ProjectsPage = () => {
                         ))}
                     </ul>
                 </motion.div>
-            )}
+            
         </motion.div>
     );
 };
