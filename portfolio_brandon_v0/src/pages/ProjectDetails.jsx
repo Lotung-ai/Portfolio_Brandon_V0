@@ -6,6 +6,7 @@ import projects from "../data/ProjectsData";
 import "../styles/projectdetails.css";
 import Footer from "../components/Footer";
 import loadImages from "../utils/imageLoader";
+import InfoBoxesSection from "../components/InfoBoxSection"
 
 const loadImage = loadImages("projects");
 
@@ -44,16 +45,23 @@ const ProjectDetails = () => {
     const diagramInView = useInView(diagramRef, { once: true, margin: "-150px 0px" });
     const secondBlockInView = useInView(secondBlockRef, { once: true, margin: "-150px 0px" });
 
+    const techs = ["Technologie", "Architecture", "Container"];
+    const services2 = ["Service01", "Service02", "Service03", "Service04", "Service05", "Service06", "Service07"];
+    
 
     const project = projects.find((p) => p.id.toString() === id);
     if (!project) return <h2>{t("projectNotFound")}</h2>;
+
+    const services = Object.keys(project)
+        .filter(key => key.startsWith("titleService"))
+        .sort()
+        .map(key => key.replace("title", "").replace("Key", ""));
 
     const challenges = t(project.listChallengeKey, { returnObjects: true });
     const solutions = t(project.listSolutionKey, { returnObjects: true });
 
     return (
         <div className="project-details">
-            {/* Image principale et titre */}
             <div className="image-container">
                 <motion.button
                     onClick={() => navigate("/")}
@@ -71,7 +79,6 @@ const ProjectDetails = () => {
                     variants={fadeInDown}
                 />
 
-                {/* Contenu de la page */}
                 <Footer fadeEffect={true} isFixed={true} />
 
                 <motion.h2
@@ -99,25 +106,22 @@ const ProjectDetails = () => {
 
             <motion.div
                 ref={contentRef}
-                className="text-container"
+                className="boxes-container"
                 initial="hidden"
                 animate={contentInView ? "visible" : "hidden"}
                 variants={fadeInContainer}
-            >
-                {/* Trois premières box animées */}
-                {[0, 1, 2].map((index) => (
-                    <motion.div className="box" custom={index} variants={fadeInUp} key={index}>
-                        <img className="fleche" src={loadImage["fleche.png"]} alt="fleche" />
-                        <motion.div className="title-box" custom={index} variants={fadeInUp}>
-                            {t(project[`title${["Technologie", "Architecture", "Container"][index]}Key`])}
-                        </motion.div>
-                        <motion.div className="text-box" custom={index} variants={fadeInUp}>
-                            {t(project[`detail${["Technologie", "Architecture", "Container"][index]}Key`])}
-                        </motion.div>
-                    </motion.div>
-                ))}
+            >              
+                <InfoBoxesSection
+                    t={t}
+                    project={project}
+                    srckeys={techs}
+                    fadeInUp={fadeInUp}
+                    loadImage={loadImage}
+                    arrowImageName="fleche.png"
+                    arrowClass="fleche"
+                />
             </motion.div>
-
+            
             <motion.img
                 ref={diagramRef}
                 src={project.image_diagram}
@@ -130,23 +134,17 @@ const ProjectDetails = () => {
 
             <motion.div
                 ref={secondBlockRef}
-                className="text-container"
+                className="boxes-container"
                 initial="hidden"
                 animate={secondBlockInView ? "visible" : "hidden"}
                 variants={fadeInContainer}
-            >
-                {[
-                    "Aut", "Front", "Patient", "Note", "Report", "Gateway", "Docker"
-                ].map((sectionKey, i) => (
-                    <motion.div className="box" custom={i} variants={fadeInUp} key={sectionKey}>
-                        <motion.div className="title-box" custom={i} variants={fadeInUp}>
-                            {t(project[`title${sectionKey}Key`])}
-                        </motion.div>
-                        <motion.div className="text-box" custom={i} variants={fadeInUp}>
-                            {t(project[`detail${sectionKey}Key`])}
-                        </motion.div>
-                    </motion.div>
-                ))}
+            >                
+                <InfoBoxesSection
+                    t={t}
+                    project={project}
+                    srckeys={services}
+                    fadeInUp={fadeInUp}
+                />
             </motion.div>
         
             <motion.div

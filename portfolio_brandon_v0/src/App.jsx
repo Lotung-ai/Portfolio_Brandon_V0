@@ -3,7 +3,6 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FloatingDownloadButton from "./components/FloatingDownloadButton";
-import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";

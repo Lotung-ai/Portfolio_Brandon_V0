@@ -70,6 +70,56 @@
       ],
       "link": "Voir le code source"
 
+    },
+    "expressVoitures": {
+      "title": "ExpressVoitures",
+      "intro": "ExpressVoitures est une application de gestion de concessionnaire automobile développée avec ASP.NET Core, permettant de gérer les véhicules, les ventes et les accès des utilisateurs via une interface sécurisée.",
+
+      "titleTechnologie": "Technologies utilisées",
+      "detailTechnologie": "ASP.NET Core, Entity Framework Core, ASP.NET Core Identity, SQL Server, Razor Pages.",
+
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "Application MVC avec séparation des responsabilités entre l’accès aux données, les contrôleurs et les vues.",
+
+      "titleContainer": "Conteneurisation",
+      "detailContainer": "Déploiement dans Microsoft Azure, facilitant l’hébergement et la mise à l’échelle de l’application.",
+
+      "titleAut": "Authentification",
+      "detailAut": "Système de connexion sécurisé via ASP.NET Core Identity avec rôles et gestion des utilisateurs.",
+
+      "titleFront": "Interface utilisateur",
+      "detailFront": "UI personnalisée pour une meilleure expérience utilisateur, notamment sur la page de connexion.",
+
+      "titleGestionVehicule": "Gestion des véhicules",
+      "detailGestionVehicule": "Permet l’ajout, la modification, la suppression et l’affichage des véhicules de la concession.",
+
+      "titleGestionVente": "Gestion des ventes",
+      "detailGestionVente": "Fonctionnalités de création, de mise à jour et de suivi des ventes réalisées.",
+
+      "titleSecurity": "Sécurité des accès",
+      "detailSecurity": "Utilisation d’ASP.NET Core Identity pour restreindre les pages aux rôles autorisés.",
+
+      "titleAzure": "Hébergement",
+      "detailAzure": "Projet déployé sur Azure App Service avec base de données SQL intégrée.",
+
+      "titleUI": "Interface Login",
+      "detailUI": "Design personnalisé pour la page de login afin d'améliorer l'expérience utilisateur dès la connexion.",
+
+      "titleChallenge": "Défis rencontrés",
+      "listChallenge": [
+        "Implémentation sécurisée d’ASP.NET Identity",
+        "Création d’un CRUD complexe pour les véhicules et ventes",
+        "Déploiement sur Azure avec base SQL Server"
+      ],
+
+      "titleSolution": "Solutions apportées",
+      "listSolution": [
+        "Structure MVC claire et testée",
+        "Utilisation des DataAnnotations pour la validation des formulaires",
+        "Configuration Azure avec migration automatique de la base"
+      ],
+
+      "link": "Voir le projet en ligne"
     }
   }
 }

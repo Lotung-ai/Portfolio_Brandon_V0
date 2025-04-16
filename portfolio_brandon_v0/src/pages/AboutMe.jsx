@@ -98,10 +98,20 @@ const AboutMe = () => {
                 initial="hidden"
                 animate={contactInView ? "visible" : "hidden"}
             >
-                    <motion.div variants={itemVariants}>
-                        {GallerySection("pageAboutMeContactTitle", contactLogos, aboutMeImages, "Logo_", t, true, "", true, contactLinks)}
-                    </motion.div>
+                <motion.div variants={itemVariants}>
+                    <GallerySection
+                        titleKey="pageAboutMeContactTitle"
+                        names={contactLogos}
+                        imageMap={aboutMeImages}
+                        srcKey="Logo_"
+                        t={t} 
+                        hoverEffect={true}
+                        textKey=""
+                        addLink={true}
+                        customLinks={contactLinks}
+                    />
                 </motion.div>
+            </motion.div>
 
             <motion.div
                 ref={projectRef}
@@ -110,11 +120,19 @@ const AboutMe = () => {
                 initial="hidden"
                 animate={projectInView ? "visible" : "hidden"}
             >
-                    <motion.div variants={itemVariants}>
-                        {GallerySection("pageAboutMeTopProject", projects, aboutMeImages, "Projet_", t, true, "pageAboutMeTopProject", true)}
-                    </motion.div>
+                <motion.div variants={itemVariants}>
+                    <GallerySection
+                        titleKey="pageAboutMeTopProject"
+                        names={projects}
+                        imageMap={aboutMeImages}
+                        srcKey="Projet_"
+                        t={t}
+                        hoverEffect={true}
+                        textKey="pageAboutMeTopProject"
+                        addLink={true}
+                    />
                 </motion.div>
-
+            </motion.div>
 
             <motion.div
                 ref={gallery1Ref}
@@ -122,9 +140,15 @@ const AboutMe = () => {
                 variants={containerVariants}
                 initial="hidden"
                 animate={gallery1InView ? "visible" : "hidden"}
-            >           
+            >
                 <motion.div variants={itemVariants}>
-                    {GallerySection("pageAboutMeTechnicalSkills", techLogos, aboutMeImages, "Logo_", t)}
+                    <GallerySection
+                        titleKey="pageAboutMeTechnicalSkills"
+                        names={techLogos}
+                        imageMap={aboutMeImages}
+                        srcKey="Logo_"
+                        t={t} 
+                    />
                 </motion.div>
                 <img src={aboutMeImages["background4.png"]} alt="background" className="gallery-background" />
             </motion.div>
@@ -137,7 +161,13 @@ const AboutMe = () => {
                 animate={gallery2InView ? "visible" : "hidden"}
             >
                 <motion.div variants={itemVariants}>
-                    {GallerySection("pageAboutMeTools", tools, aboutMeImages, "Logo_", t)}
+                    <GallerySection
+                        titleKey="pageAboutMeTools"
+                        names={tools}
+                        imageMap={aboutMeImages}
+                        srcKey="Logo_"
+                        t={t}
+                    />
                 </motion.div>
             </motion.div>
 
@@ -149,7 +179,13 @@ const AboutMe = () => {
                 animate={gallery3InView ? "visible" : "hidden"}
             >
                 <motion.div variants={itemVariants}>
-                    {GallerySection("pageAboutMeFrameworksAndLibraries", frameworks, aboutMeImages, "Logo_", t)}
+                    <GallerySection
+                        titleKey="pageAboutMeFrameworksAndLibraries"
+                        names={frameworks}
+                        imageMap={aboutMeImages}
+                        srcKey="Logo_"
+                        t={t} 
+                    />
                 </motion.div>
             </motion.div>
         </motion.div>

@@ -1,7 +1,8 @@
 ﻿import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import "../styles/components/gallery-section.css";
 
-const GallerySection = (
+const GallerySection = ({
     titleKey,
     names,
     imageMap,
@@ -16,7 +17,7 @@ const GallerySection = (
     logoBoxClass = "logo-box",
     imageClass = "logo-image",
     textClass = "logo-text"
-) => {
+}) => {
     return (
         <div className={wrapperClass}>
             <h2>{t(titleKey)}</h2>
@@ -67,6 +68,23 @@ const GallerySection = (
             </div>
         </div>
     );
+};
+
+GallerySection.propTypes = {
+    titleKey: PropTypes.string.isRequired,
+    names: PropTypes.arrayOf(PropTypes.string).isRequired,
+    imageMap: PropTypes.object.isRequired,
+    srcKey: PropTypes.string.isRequired,
+    t: PropTypes.func.isRequired,
+    hoverEffect: PropTypes.bool,
+    textKey: PropTypes.string,
+    addLink: PropTypes.bool,
+    customLinks: PropTypes.array,
+    wrapperClass: PropTypes.string,
+    itemWrapperClass: PropTypes.string,
+    logoBoxClass: PropTypes.string,
+    imageClass: PropTypes.string,
+    textClass: PropTypes.string,
 };
 
 export default GallerySection;
