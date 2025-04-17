@@ -45,10 +45,14 @@ const ProjectDetails = () => {
     const diagramInView = useInView(diagramRef, { once: true, margin: "-150px 0px" });
     const secondBlockInView = useInView(secondBlockRef, { once: true, margin: "-150px 0px" });
 
-    const techs = ["Technologie", "Architecture", "Container"];   
 
     const project = projects.find((p) => p.id.toString() === id);
     if (!project) return <h2>{t("projectNotFound")}</h2>;
+
+    const potentialTechs = ["Technologie", "Architecture", "Container"];
+    const techs = potentialTechs.filter(tech =>
+        Object.prototype.hasOwnProperty.call(project, `title${tech}Key`)
+    );
 
     const services = Object.keys(project)
         .filter(key => key.startsWith("titleService"))
@@ -98,7 +102,7 @@ const ProjectDetails = () => {
                 >
                     {t(project.introKey)}
                     </motion.p>
-                    <a className="project-link" href={project.link}>{t(project.linkKey)}</a>
+                    <a className="project-link" target="_blank"  href={project.link}>{t(project.linkKey)}</a>
                 </motion.div>
             </div>
 

@@ -11,6 +11,7 @@ const InfoBoxesSection = ({
     loadImage = {},
     arrowImageName,
 }) => {
+
     return (
         <motion.div className="info-container">
             <h2 className="info-title">{t(titleKey)}</h2>

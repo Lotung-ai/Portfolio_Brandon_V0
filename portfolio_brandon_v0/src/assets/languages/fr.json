@@ -16,7 +16,7 @@
   "pageAboutMeTopProject": "Projets",
   "pageAboutMeTopProject00": "Microservices",
   "pageAboutMeTopProject01": "ExpressVoiture",
-  "pageAboutMeTopProject02": "Portfolio",
+  "pageAboutMeTopProject02": "API Rest",
   "pageAboutMeTechnicalSkills": "Compétences techniques",
   "pageAboutMeTools": "Outils",
   "pageAboutMeFrameworksAndLibraries": "Frameworks et bibliothèques",
@@ -122,17 +122,14 @@
       "link": "Voir le projet en ligne"
     },
     "apiRest": {
-      "title": "API REST - Gestion de base de données",
+      "title": "API REST",
       "intro": "API REST est une application backend développée avec ASP.NET Core, utilisant l'approche Code-First d'Entity Framework pour gérer une base de données SQL Server. Elle propose une architecture RESTful sécurisée grâce aux rôles et tokens JWT.",
 
-      "titleTechnologie": "Technologies utilisées",
-      "detailTechnologie": "ASP.NET Core, Entity Framework Core (Code-First), SQL Server, JWT (JSON Web Token) pour l’authentification et l’autorisation, Microsoft SQL Server Management Studio (SSMS).",
+      "titleTechnologie": "Technologies",
+      "detailTechnologie": "ASP.NET Core, Entity Framework Core, SQL Server, JWT.",
 
       "titleArchitecture": "Architecture",
       "detailArchitecture": "Architecture RESTful avec séparation des responsabilités entre contrôleurs, services et accès aux données (repositories).",
-
-      "titleContainer": "Conteneurisation",
-      "detailContainer": "Non spécifiée pour ce projet.",
 
       "titleAut": "Authentification & Autorisation",
       "detailAut": "Système d’authentification basé sur JWT. Les utilisateurs reçoivent un token après identification, et leurs accès sont contrôlés selon des rôles prédéfinis.",
@@ -148,6 +145,9 @@
 
       "titleEntityFramework": "Migrations de base de données",
       "detailEntityFramework": "Utilisation d'Entity Framework Core pour la création et l’application des migrations. Synchronisation entre modèle C# et base SQL.",
+     
+      "titleSwagger": "Documentation de l'API",
+      "detailSwagger": "Intégration de Swagger pour générer automatiquement une documentation interactive des endpoints REST et faciliter les tests manuels via une interface web.",
 
       "titleChallenge": "Défis rencontrés",
       "listChallenge": [

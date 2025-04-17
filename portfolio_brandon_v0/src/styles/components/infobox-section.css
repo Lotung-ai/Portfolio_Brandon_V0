@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     width: 150px;
-    height: 180px;
+    min-height: 180px;
     margin: 10px;
     border: 1px solid #00FF9D;
     background-color: #1E0631;
@@ -37,7 +37,9 @@
 }
 
 .info-arrow {
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     text-align: center;
     margin: 5px;
 }
