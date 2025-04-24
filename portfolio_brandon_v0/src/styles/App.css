@@ -1,0 +1,42 @@
+
+@font-face {
+    font-family: "akzidenz-grotesk";
+    src: url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), 
+         url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), 
+         url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-style: normal;
+}
+
+/* Fond par défaut et application de la police */
+html, body {
+    background-color: #000;
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
+    margin: 0;
+    margin-top: 50px;
+    color: #FFF; /* Couleur du texte en noir */
+    overflow-x: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* Exemple de style pour les titres et autres éléments */
+h1, h2, h3, p,label,button, .button-send, .menu-item {
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
+}
+/* Titres responsives */
+h1 {
+    font-size: clamp(3rem, 4vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+.button, .clickable {
+    cursor: pointer;
+}

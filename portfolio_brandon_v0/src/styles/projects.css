@@ -1,0 +1,66 @@
+/* ----------------------------- Taille des containers ----------------------------- */
+
+.projects-wrapper, .background-image-eva-zoom {
+    width: 100%;
+    height: 100vh;
+}
+/* Conteneur principal de la page */
+.projects-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ----------------------------- Image de fond ----------------------------- */
+
+/* Image de fond qui reste derrière le contenu */
+.background-image-eva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* ----------------------------- Contenu des projets ----------------------------- */
+
+/* Conteneur du menu des projets */
+.projects-container {
+    position: relative;
+    width: 100%;
+    max-width:450px;
+    height: auto;
+    padding: 20px;
+    z-index: 48;
+}
+
+/* Liste des éléments du menu */
+.projects-list {
+    width:100%;
+    list-style: none;
+    padding: 10px;
+    margin-top: 40px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+/* ----------------------------- Items du menu ----------------------------- */
+
+/* Style de chaque item du menu */
+.project-item {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 500;
+    color: #FFF; /* Couleur du texte par défaut */
+    padding: 10px 0;
+    display: block;
+    cursor: pointer;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, -webkit-text-fill-color 0.3s ease; /* Transition sur hover */
+    -webkit-text-stroke: 2px #FFF; /* Contour du texte pour Webkit */
+    text-stroke: 2px #FFF; /* Contour du texte pour navigateurs modernes */
+    transform-origin: left center; /* Point de transformation de l'élément */
+}
+
+    /* Hover sur les items du menu */
+    .project-item:hover {
+        -webkit-text-fill-color: transparent; /* Rendre le texte transparent */
+        -webkit-text-stroke: 2px #FFF; /* Repasser le contour du texte */
+        text-stroke: 2px #5A2D6C; /* Repasser le contour du texte pour navigateurs modernes */
+    }
