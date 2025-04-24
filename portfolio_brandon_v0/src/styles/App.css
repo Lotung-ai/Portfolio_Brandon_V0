@@ -21,12 +21,7 @@ body {
     overflow: hidden;
 }
 
-/* Media Queries pour les petits écrans */
-@media (max-width: 768px) {
-    html, body {
-        margin-top: 50px; /* Réduit l'espace en haut sur les petits écrans */
-    }
-}
+
 
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p,label,button, .button-send, .menu-item {
