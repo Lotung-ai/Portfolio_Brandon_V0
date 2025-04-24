@@ -128,3 +128,39 @@
 .project-intro, .project-link, .title-box {
     font-size: clamp(1rem, 1.5vw, 2rem);
 }
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.nav-slot {
+    flex: 1;
+}
+
+    .nav-slot.left {
+        text-align: left;
+    }
+
+    .nav-slot.right {
+        text-align: right;
+    }
+
+.nav-arrow {
+    background-color: #1E0631;
+    border: 2px solid #00FF9D;
+    color: #00FF9D;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .nav-arrow:hover {
+        background-color: #00FF9D;
+        color: #1E0631;
+    }

@@ -9,12 +9,13 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\assets\home\" />
+    <None Remove="src\assets\home\**" />
+    <TypeScriptConfiguration Remove="src\assets\home\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="src\assets\navbar\" />
     <Folder Include="src\assets\aboutme\" />
-    <Folder Include="src\assets\animations\" />
     <Folder Include="src\assets\contact\" />
     <Folder Include="src\assets\projects\project-1\" />
-    <Folder Include="src\styles\animations\" />
   </ItemGroup>
 </Project>

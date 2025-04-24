@@ -49,6 +49,10 @@ const ProjectDetails = () => {
     const project = projects.find((p) => p.id.toString() === id);
     if (!project) return <h2>{t("projectNotFound")}</h2>;
 
+    const currentIndex = projects.findIndex((p) => p.id.toString() === id);
+    const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+    const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+
     const potentialTechs = ["Technologie", "Architecture", "Container"];
     const techs = potentialTechs.filter(tech =>
         Object.prototype.hasOwnProperty.call(project, `title${tech}Key`)
@@ -174,6 +178,31 @@ const ProjectDetails = () => {
                     ))}
                 </ul>
             </motion.div>
+            <div className="project-navigation">
+                <div className="nav-slot left">
+                    {prevProject && (
+                        <motion.button
+                            className="nav-arrow"
+                            whileHover={{ x: -5, scale: 1.1 }}
+                            onClick={() => navigate(`/projects/${prevProject.id}`)}
+                        >
+                            ← {t(prevProject.titleKey)}
+                        </motion.button>
+                    )}
+                </div>
+
+                <div className="nav-slot right">
+                    {nextProject && (
+                        <motion.button
+                            className="nav-arrow"
+                            whileHover={{ x: 5, scale: 1.1 }}
+                            onClick={() => navigate(`/projects/${nextProject.id}`)}
+                        >
+                            {t(nextProject.titleKey)} →
+                        </motion.button>
+                    )}
+                </div>
+            </div>
 
         </div>
     );
