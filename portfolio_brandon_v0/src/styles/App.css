@@ -21,8 +21,6 @@ body {
     overflow: hidden;
 }
 
-
-
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p,label,button, .button-send, .menu-item {
     font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */

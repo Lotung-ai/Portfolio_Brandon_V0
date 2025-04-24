@@ -73,7 +73,7 @@ const AboutMe = () => {
                     transition={{ duration: 2 }}
                 />
                 <motion.img
-                    src={aboutMeImages["shinji_profile_image.jpeg"]}
+                    src={aboutMeImages["photo.jpg"]}
                     alt="Photo-Profil"
                     className="profile-image"
                     initial={{ opacity: 0 }}
