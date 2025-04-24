@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.4.7",
+    "i18next": "^24.2.3",
+    "lucide-react": "^0.476.0",
+    "react-i18next": "^15.4.1",
     "react-router-dom": "^7.2.0"
   },
   "devDependencies": {

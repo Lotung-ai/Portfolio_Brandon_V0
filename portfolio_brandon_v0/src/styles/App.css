@@ -1,42 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+@font-face {
+    font-family: "akzidenz-grotesk";
+    src: url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), 
+         url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), 
+         url("https://use.typekit.net/af/9d033e/000000000000000000013633/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Fond par défaut et application de la police */
+html, body {
+    background-color: #000;
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police */
+    margin: 0;
+    margin-top: 50px;
+    color: #FFF; /* Couleur du texte en noir */
+    overflow-x: hidden;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Exemple de style pour les titres et autres éléments */
+h1, h2, h3, p,label,button, .button-send, .menu-item {
+    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
+}
+/* Titres responsives */
+h1 {
+    font-size: clamp(3rem, 4vw, 4rem);
 }
 
-.card {
-  padding: 2em;
+h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
 }
 
-.read-the-docs {
-  color: #888;
+p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+.button, .clickable {
+    cursor: pointer;
 }
