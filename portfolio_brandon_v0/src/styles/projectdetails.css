@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center; /* Permet aux enfants de prendre toute la largeur */
     position: relative; /* Permet de positionner le titre par-dessus l’image */
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 .back-button {
@@ -65,18 +65,26 @@
     text-transform: uppercase; /* Mettre en majuscules (optionnel) */
 }
 
+.project-image-diagram {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto; /* ajuste cette valeur selon tes besoins */
+}
+
 .box-intro {
     position: absolute;
     width: 100%;
     bottom: 5%;
-    width: 60%;
+    max-width: 60%;
     border: 1px solid #00FF9D;
     background-color: #1E0631;
+    padding: 10px 20px;
+    margin : 0 10px;
 }
 
-.project-intro {
+.texte-intro {
     width: 100%;
-    margin: 10px;
 }
 
 .boxes-container {

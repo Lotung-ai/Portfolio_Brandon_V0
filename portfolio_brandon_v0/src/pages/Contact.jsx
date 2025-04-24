@@ -11,6 +11,8 @@ const ContactForm = () => {
 
     const { t } = useTranslation();
 
+    const contactLinks = [import.meta.env.VITE_EMAIL, import.meta.env.VITE_LINKEDIN, import.meta.env.VITE_GITHUB];
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -108,9 +110,11 @@ const ContactForm = () => {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
                     <div className="list-item">
-                        <p className="item-contact">Email</p>
-                        <p className="item-contact">Linkedin</p>
-                        <p className="item-contact">Github</p>
+                        {contactLinks.map((link, index) => (
+                            <a key={index} href={link} className="item-contact" target="_blank" rel="noopener noreferrer">
+                                {link}
+                            </a>
+                        ))}
                     </div>
 
                     <label>{t('pageContactName')}</label>

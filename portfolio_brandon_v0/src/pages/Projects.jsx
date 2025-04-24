@@ -26,22 +26,6 @@ const itemVariants = {
 const ProjectsPage = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    /*const [showVideo, setShowVideo] = useState(true);
-    const [showProjects, setShowProjects] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowVideo(false);
-            setTimeout(() => setShowProjects(true), 2300); // Délai avant d'afficher le menu
-        }, 5000); // Durée de la vidéo avant de passer à l'image de fond
-        return () => clearTimeout(timer);
-    }, []);
-
-    const skipAnimation = () => {
-        setShowVideo(false);
-        setShowProjects(true);
-    };*/
-
 
     const translatedProjects = projects.map(project => ({
         ...project,
@@ -59,30 +43,6 @@ const ProjectsPage = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
             />
-
-            {/* Phase 1 : Lecture de la vidéo */}
-            {/* {showVideo && (
-                <div className="animation-container">
-                    <motion.video
-                        src={loadImage["look_eva.mp4"]}
-                        autoPlay
-                        playsInline
-                        muted
-                        className="video-animation"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1 }}
-                        onEnded={() => {
-                            setShowVideo(false);
-                            setTimeout(() => setShowProjects(true), 1000);
-                        }}
-                    />
-                </div>
-            )}*/}
-
-            {/* Phase 3 : Contenu des projets avec animation après la vidéo */}
-             
                 <motion.div
                     className="projects-container"
                     initial="hidden"

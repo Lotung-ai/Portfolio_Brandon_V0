@@ -1,4 +1,7 @@
 /* Conteneur principal */
+a{
+    color:white;
+}
 .contact-container {
     position: relative;
     width: 100%;
@@ -31,7 +34,7 @@
 .glow-point {
     position: absolute;
     top: 35%;
-    left: 38%;
+    left: 40%;
     width: 4%; /* Même largeur que l'œil */
     height: 4%; /* Même hauteur que l'œil */
     border-radius: 50%;
@@ -59,8 +62,12 @@
 
 /* Liste des contacts */
 .list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espace entre les éléments */
     margin-bottom: 15px;
 }
+
 
 /* Styles des champs de formulaire */
 form {

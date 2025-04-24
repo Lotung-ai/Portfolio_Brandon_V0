@@ -66,7 +66,7 @@ const projects = [
         titleSolutionKey: "projects.expressVoitures.titleSolution",
         listSolutionKey: "projects.expressVoitures.listSolution",
         linkKey: "projects.expressVoitures.link",
-        image_diagram: loadImage["project-1/diagram-expressvoitures.jpg"],
+        image_diagram: loadImage["project-1/diagram-expressvoitures.png"],
         image_top: loadImage["project-1/top-expressvoitures.jpg"],
         link: "https://github.com/Lotung-ai/ExpressVoitureAzure"
     },
@@ -95,7 +95,7 @@ const projects = [
         titleSolutionKey: "projects.apiRest.titleSolution",
         listSolutionKey: "projects.apiRest.listSolution",
         linkKey: "projects.apiRest.link",
-        image_diagram: loadImage["project-2/diagram-api.jpg"],
+        image_diagram: loadImage["project-2/diagram-api.png"],
         image_top: loadImage["project-2/top-api.jpg"],
         link: "https://github.com/Lotung-ai/APIRest"
     },

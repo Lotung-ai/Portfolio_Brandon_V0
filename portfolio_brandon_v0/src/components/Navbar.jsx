@@ -9,8 +9,17 @@ export default function Navbar() {
     const { t } = useTranslation();
 
     const [showNav, setShowNav] = useState(true); // Contrôle l'opacité lors du scroll
+    const [menuOpen, setMenuOpen] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0); // Pour suivre la position du scroll
     const location = useLocation();
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const triggerAnimation = () => {
+        setIsAnimating(true);
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 2000); // même durée que transition
+    }
 
     // Réinitialiser l'animation de translation lors du changement de page
     useEffect(() => {
@@ -79,15 +88,38 @@ export default function Navbar() {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="navbar-content"
             >
-                <Link to="/" className="spin-logo">
+                <button
+                    className="burger-button"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
+                </button>
+
+                <motion.div
+                    className="spin-logo"
+                    animate={isAnimating ? { rotateY: 180 } : { rotateY: 0 }}
+                    transition={{ duration: 1, ease: "linear" }}
+                    onClick={() => {
+                        if (window.innerWidth <= 768) {
+                            setMenuOpen(!menuOpen);
+                            triggerAnimation();
+                        } else {
+                            window.location.href = "/";
+                        }
+                    }}
+                >
                     <div className="navbar-logo" />
-                </Link>
-                <div className="menu">
-                    <Link to="/aboutme">{t('navBarItemAboutMe')}</Link>
-                    <Link to="/projects">{t('navBarItemProjects')}</Link>
-                    <Link to="/contact">{t('navBarItemContact')}</Link>
-                    <LanguageSwitcher/>
+                </motion.div>
+
+                <div className={`menu ${menuOpen ? "active" : ""}`}>
+                    <Link to="/aboutme" onClick={() => setMenuOpen(false)}>{t('navBarItemAboutMe')}</Link>
+                    <Link to="/projects" onClick={() => setMenuOpen(false)}>{t('navBarItemProjects')}</Link>
+                    <Link to="/contact" onClick={() => setMenuOpen(false)}>{t('navBarItemContact')}</Link>
+                    <LanguageSwitcher />
                 </div>
+
             </motion.div>
         </motion.nav>
     );

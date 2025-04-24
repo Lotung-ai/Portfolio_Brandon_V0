@@ -1,8 +1,8 @@
 {
-  "navBarItemAboutMe": "À propos de moi",
+  "navBarItemAboutMe": "À Propos",
   "navBarItemProjects": "Projets",
   "navBarItemContact": "Contact",
-  "footerTitle": "MonSite",
+  "footerTitle": "Bienvenu à mon Portfolio",
   "footerCopyright": "Tous droits réservés.",
   "footerAboutMe": "À propos de moi",
   "footerProjects": "Projets",
@@ -75,7 +75,7 @@
       "title": "ExpressVoitures",
       "intro": "ExpressVoitures est une application de gestion de concessionnaire automobile développée avec ASP.NET Core, permettant de gérer les véhicules, les ventes et les accès des utilisateurs via une interface sécurisée.",
 
-      "titleTechnologie": "Technologies utilisées",
+      "titleTechnologie": "Technologies",
       "detailTechnologie": "ASP.NET Core, Entity Framework Core, ASP.NET Core Identity, SQL Server, Razor Pages.",
 
       "titleArchitecture": "Architecture",

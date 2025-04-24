@@ -18,20 +18,22 @@
 }
 
     .floating-download-button:hover {
-        background: #6200ea;
+        background: #9C27B0;
     }
 
 .download-panel {
     position: fixed;
     bottom: 100px;
     right: 20px;
-    background: white;
+    background: #1E0631;
     padding: 15px;
+    border: 1px solid #00FF9D;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 1000;
 }
 
 .confirm-download,

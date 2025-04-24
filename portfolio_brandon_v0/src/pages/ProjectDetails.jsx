@@ -66,7 +66,7 @@ const ProjectDetails = () => {
         <div className="project-details">
             <div className="image-container">
                 <motion.button
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/projects")}
                     className="back-button"
                     whileHover={{ scale: 1.1, backgroundColor: "rgba(0, 0, 0, 0.8)", transition: { duration: 0.2 } }}
                 >
@@ -95,7 +95,7 @@ const ProjectDetails = () => {
                     className="box-intro"
                 >
                 <motion.p
-                    className="project-intro"
+                    className="texte-intro"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInDown}

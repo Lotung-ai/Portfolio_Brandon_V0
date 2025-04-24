@@ -23,20 +23,20 @@ const InfoBoxesSection = ({
                         variants={fadeInUp}
                         key={index}
                     >
-                        {loadImage[arrowImageName] && (
-                            <img
-                                className="info-arrow"
-                                src={loadImage[arrowImageName]}
-                                alt="fleche"
-                            />
-                        )}
-
-                        <motion.div
-                            className="info-box-title"
+                        <motion.div className={`info-box-arrow-title ${loadImage[arrowImageName] ? 'has-arrow' : 'no-arrow'}`}
                             custom={index}
-                            variants={fadeInUp}
-                        >
-                            {t(project[`title${key}Key`])}
+                            variants={fadeInUp}>
+                            {loadImage[arrowImageName] && (
+                                <img
+                                    className="info-arrow"
+                                    src={loadImage[arrowImageName]}
+                                    alt="fleche"
+                                />
+                            )}
+
+                            <div className="info-box-title">
+                                {t(project[`title${key}Key`])}
+                            </div>
                         </motion.div>
 
                         <motion.div

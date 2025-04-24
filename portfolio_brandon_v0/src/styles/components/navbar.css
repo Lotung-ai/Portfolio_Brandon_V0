@@ -29,7 +29,8 @@
 .navbar-content {
     display: flex;
     flex-grow: 1;
-    justify-content: left; /* Centre les éléments du menu */
+    justify-content: left;
+    max-width: 100%;
 }
 /* Menu */
 .menu {
@@ -40,19 +41,129 @@
     padding: 0 20px; /* Espacement entre les liens */
 }
 
-    /* Liens du menu */
+    /* Nouveau style pour les liens du menu façon Evangelion */
     .menu a {
-        color: #ddd;
         text-decoration: none;
-        transition: color 0.3s;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-family: 'Orbitron', sans-serif;
+        position: relative;
     }
 
-        .menu a:hover {
-            color: #fff;
+        /* Couleurs spécifiques */
+        .menu a:nth-child(1) {
+            color: #9C27B0;
+            border-color: #9C27B0;
+            box-shadow: 0 0 10px #9C27B0, 0 0 5px #9C27B0 inset;
         }
 
+        .menu a:nth-child(2) {
+            color: #FF003C;
+            border-color: #FF003C;
+            box-shadow: 0 0 10px #FF003C, 0 0 5px #FF003C inset;
+        }
+
+        .menu a:nth-child(3) {
+            color: #FFD700;
+            border-color: #FFD700;
+            box-shadow: 0 0 10px #FFD700, 0 0 5px #FFD700 inset;
+        }
+
+        /* Hover effets Evangelion */
+        .menu a:nth-child(1):hover {
+            background: #9C27B0;
+            color: #1E0631;
+            box-shadow: 0 0 25px #9C27B0, 0 0 10px #9C27B0 inset;
+        }
+
+        .menu a:nth-child(2):hover {
+            background: #FF003C;
+            color: #1E0631;
+            box-shadow: 0 0 25px #FF003C, 0 0 10px #FF003C inset;
+        }
+
+        .menu a:nth-child(3):hover {
+            background: #FFD700;
+            color: #1E0631;
+            box-shadow: 0 0 25px #FFD700, 0 0 10px #FFD700 inset;
+        }
+
+        /* Click effet */
+        .menu a:active {
+            transform: scale(0.95);
+        }
+
+
+.burger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+    /* Animation croix quand ouvert */
+    .burger-line.open:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-line.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-line.open:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+/* Menu par défaut */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive version mobile */
+@media screen and (max-width: 768px) {
+    .burger-button {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(20, 20, 20, 0.95);
+        transition: right 0.3s ease;
+        gap: 40px;
+        z-index: 1000;
+    }
+
+        .menu.active {
+            right: 0;
+        }
+}
 
 /* Animation du logo */
 @keyframes spinDiamond3D {
