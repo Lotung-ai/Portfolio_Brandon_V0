@@ -1,0 +1,166 @@
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Permet aux enfants de prendre toute la largeur */
+    position: relative; /* Permet de positionner le titre par-dessus l’image */
+    padding-bottom: 150px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background: none; /* Fond transparent */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* Taille plus grande pour la flèche */
+    border-radius: 50%; /* Bouton rond */
+    width: 50px; /* Bouton plus grand */
+    height: 50px; /* Bouton plus grand */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+    .back-button:hover {
+        background: none; /* Fond transparent */
+        border-color: white; /* Garde le bord blanc */
+        border: 2px solid white; /* Bord blanc */
+        color: white; /* Assure que la flèche reste blanche */
+    }
+/* Conteneur de l’image */
+.image-container, .project-image-diagram {
+    position: relative; /* Permet au titre de se positionner par-dessus */
+    width: 100%; /* L'image prend toute la largeur */
+}
+
+.project-link {
+    color: #9C27B0;
+    margin: 10px;
+}
+
+    .project-link:hover {
+        color: #00FF9D;
+    }
+/* Image principale sans marge */
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: top; /* Laisse la hauteur s'adapter */
+}
+
+.project-title {
+    position: absolute;
+    top: 1px; /* Distance du haut */
+    right: 20px; /* Distance de la droite */
+    font-size: clamp(2.5rem, 5vw, 6rem);
+    color: transparent; /* Vide l’intérieur */
+    -webkit-text-stroke: 0.1px #FFF; /* Contour pour Safari et Chrome */
+    text-stroke: 0.1px #FFF; /* Contour pour navigateurs modernes */
+    text-transform: uppercase; /* Mettre en majuscules (optionnel) */
+}
+
+.project-image-diagram {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto; /* ajuste cette valeur selon tes besoins */
+}
+
+.box-intro {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    max-width: 60%;
+    border: 1px solid #00FF9D;
+    background-color: #1E0631;
+    padding: 10px 20px;
+    margin : 0 10px;
+}
+
+.texte-intro {
+    width: 100%;
+}
+
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.list-section {
+    background-color: #2A0A45;
+    border: 1px solid #00FF9D;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.list-title {
+    color: #9C27B0;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.list-challenge, .list-solution {
+    list-style-type: disc;
+    padding-left: 30px;
+    color: white;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    margin-bottom: 30px;
+}
+
+.item-challenge, .item-solution {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.project-intro, .project-link, .title-box {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.nav-slot {
+    flex: 1;
+}
+
+    .nav-slot.left {
+        text-align: left;
+    }
+
+    .nav-slot.right {
+        text-align: right;
+    }
+
+.nav-arrow {
+    background-color: #1E0631;
+    border: 2px solid #00FF9D;
+    color: #00FF9D;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .nav-arrow:hover {
+        background-color: #00FF9D;
+        color: #1E0631;
+    }
