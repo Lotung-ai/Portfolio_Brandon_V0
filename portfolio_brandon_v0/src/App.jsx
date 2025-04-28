@@ -34,7 +34,7 @@ const AnimatedRoutes = () => {
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/Portfolio_Brandon_V0">
             <ScrollToTop />
             <Navbar />
             <FloatingDownloadButton />
