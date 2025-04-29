@@ -1,14 +1,20 @@
 {
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "build": "^0.1.4",
     "framer-motion": "^12.4.7",
     "i18next": "^24.2.3",
+    "js-yaml": "^4.1.0",
     "lucide-react": "^0.476.0",
     "react-i18next": "^15.4.1",
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.2.0",
+    "run": "^1.5.0",
+    "uglify-js": "^3.19.3"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "vite": "^6.3.3",
     "vite-plugin-gh-pages": "^1.0.1"
   }
 }
