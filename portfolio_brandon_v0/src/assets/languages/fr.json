@@ -68,7 +68,7 @@
         "Transfert d'autorisation via cookies JWT",
         "Orchestration via Docker Compose"
       ],
-      "link": "Voir le code source"
+      "link": "Voir le dépôt Github"
 
     },
     "expressVoitures": {
@@ -119,7 +119,7 @@
         "Configuration Azure avec migration automatique de la base"
       ],
 
-      "link": "Voir le projet en ligne"
+      "link": "Voir le dépôt Github"
     },
     "apiRest": {
       "title": "API REST",
@@ -145,7 +145,7 @@
 
       "titleEntityFramework": "Migrations de base de données",
       "detailEntityFramework": "Utilisation d'Entity Framework Core pour la création et l’application des migrations. Synchronisation entre modèle C# et base SQL.",
-     
+
       "titleSwagger": "Documentation de l'API",
       "detailSwagger": "Intégration de Swagger pour générer automatiquement une documentation interactive des endpoints REST et faciliter les tests manuels via une interface web.",
 
@@ -165,7 +165,7 @@
         "Configuration propre des migrations et gestion de la base de données via Entity Framework"
       ],
 
-      "link": "https://github.com/Lotung-ai/APIRest"
+      "link": "Voir le dépôt Github"
     }
 
   }

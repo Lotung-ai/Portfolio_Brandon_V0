@@ -2,7 +2,7 @@
   "navBarItemAboutMe": "About Me",
   "navBarItemProjects": "Projects",
   "navBarItemContact": "Contact",
-  "footerTitle": "MySite",
+  "footerTitle": "Welcome to my Portfolio",
   "footerCopyright": "All rights reserved.",
   "footerAboutMe": "About Me",
   "footerProjects": "Projects",
@@ -11,44 +11,160 @@
   "homeText": "Select an item from the menu",
   "homeDialogue": "About Me",
   "pageAboutMeTitle": "About Me",
-  "pageAboutMeDescription": "Hello, I am Brandon KU. I am a full-stack developer with a strong specialization in backend development with C#/.NET, while also having solid skills in ReactJS for frontend development. Passionate about coding and new technologies, I love learning, experimenting, and pushing boundaries to design high-performance and useful applications.",
+  "pageAboutMeDescription": "Hi, I’m Brandon KU. I’m a full-stack developer specialized in backend with C#/.NET, while also having strong skills in ReactJS for frontend development. Passionate about programming and new technologies, I love learning, experimenting, and pushing my limits to design efficient and useful applications.",
   "pageAboutMeContactTitle": "Contact",
+  "pageAboutMeTopProject": "Projects",
+  "pageAboutMeTopProject00": "Microservices",
+  "pageAboutMeTopProject01": "ExpressVoiture",
+  "pageAboutMeTopProject02": "REST API",
   "pageAboutMeTechnicalSkills": "Technical Skills",
   "pageAboutMeTools": "Tools",
-  "pageAboutMeFrameworksAndLibraries": "Frameworks & Libraries",
+  "pageAboutMeFrameworksAndLibraries": "Frameworks and Libraries",
   "pageProjectsTitle": "My Projects",
   "pageContactTitle": "Contact Me",
   "pageContactName": "Name:",
   "pageContactEmail": "Email:",
   "pageContactMessage": "Message:",
-  "pageContactButtonSend": "Send",
-    "projects": {
-      "microservices": {
-        "titleKey": "Microservices",
-        "introKey": "projects.microservices.intro",
-        "titleTechnologieKey": "projects.microservices.titleTechnologie",
-        "detailTechnologieKey": "projects.microservices.detailTechnologie",
-        "titleArchitectureKey": "projects.microservices.titleArchitecture",
-        "detailArchitectureKey": "projects.microservices.detailArchitecture",
-        "titleContainerKey": "projects.microservices.titleContainer",
-        "detailContainerKey": "projects.microservices.detailContainer",
-        "titlelAutKey": "projects.microservices.titleAut",
-        "detailAutKey": "projects.microservices.detailAut",
-        "titlelFrontKey": "projects.microservices.titleFront",
-        "detailFrontKey": "projects.microservices.detailFront",
-        "titlelPatientKey": "projects.microservices.titlePatient",
-        "detailPatientKey": "projects.microservices.detailPatient",
-        "titlelNoteKey": "projects.microservices.titleNote",
-        "detailNoteKey": "projects.microservices.detailNote",
-        "titlelReportKey": "projects.microservices.titleReport",
-        "detailReportKey": "projects.microservices.detailReport",
-        "titlelGatewayKey": "projects.microservices.titleGateway",
-        "detailGatewayKey": "projects.microservices.detailGateway",
-        "titleDockerKey": "projects.microservices.titleDocker",
-        "detailDockerKey": "projects.microservices.detailDocker",
-        "titleChallengeKey": "projects.microservices.titleChallenge",
-        "detailChallengeKey": "projects.microservices.detailChallenge",
-        "linkKey": "projects.microservices.link"
-      }
+  "projectNotFound": "Project not found",
+  "projects": {
+    "microservices": {
+      "title": "Microservices",
+      "intro": "The goal is to create an application based on a Microservices architecture allowing authorized users to create and manage patient data while ensuring monitoring. A reporting system will be implemented to alert users when a patient is at risk of diabetes.",
+      "titleTechnologie": "Technologies",
+      "detailTechnologie": "Frameworks and databases used: .NET, ASP.NET, Entity Framework, SQL Server, MongoDB, Ocelot.",
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "Microservices architecture for better scalability and modularity.",
+      "titleContainer": "Containerization",
+      "detailContainer": "Use of Docker for isolation and deployment of services.",
+      "titleAut": "MicroServiceAuth",
+      "detailAut": "Manages user authentication and authorization via JWT tokens. Ensures security and validates access to other services.",
+
+      "titleFront": "MicroFrontEnd",
+      "detailFront": "Responsible for the user interface, it displays service data and offers a smooth and responsive experience.",
+
+      "titlePatient": "MicroServiceSQL",
+      "detailPatient": "Stores structured patient data in SQL Server, managing personal and medical information.",
+
+      "titleNote": "MicroServiceNote",
+      "detailNote": "Stores patient notes in MongoDB, allowing management of unstructured data such as medical comments.",
+
+      "titleReport": "MicroServiceReport",
+      "detailReport": "Analyzes patient data to detect diabetes risks and alerts users of at-risk patients.",
+
+      "titleGateway": "OcelotAPIGw",
+      "detailGateway": "Centralizes client requests and routes them to the appropriate microservices while ensuring security and scalability.",
+
+      "titleDocker": "Container",
+      "detailDocker": "Uses Docker to containerize microservices, enabling flexible management and deployment of services.",
+      "titleChallenge": "Technical Challenges",
+      "listChallenge": [
+        "Implementing a microservices architecture",
+        "Secure transmission of authorization",
+        "Dockerization and orchestration of services"
+      ],
+      "titleSolution": "Solutions Provided",
+      "listSolution": [
+        "Using Ocelot as API gateway",
+        "Authorization transfer via JWT cookies",
+        "Orchestration via Docker Compose"
+      ],
+      "link": "View repo Github"
+    },
+    "expressVoitures": {
+      "title": "ExpressVoitures",
+      "intro": "ExpressVoitures is a car dealership management application developed with ASP.NET Core, allowing vehicle, sales, and user access management through a secure interface.",
+
+      "titleTechnologie": "Technologies",
+      "detailTechnologie": "ASP.NET Core, Entity Framework Core, ASP.NET Core Identity, SQL Server, Razor Pages.",
+
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "MVC application with separation of concerns between data access, controllers, and views.",
+
+      "titleContainer": "Containerization",
+      "detailContainer": "Deployment on Microsoft Azure, facilitating hosting and scalability of the application.",
+
+      "titleAut": "Authentication",
+      "detailAut": "Secure login system via ASP.NET Core Identity with roles and user management.",
+
+      "titleFront": "User Interface",
+      "detailFront": "Custom UI for a better user experience, especially on the login page.",
+
+      "titleGestionVehicule": "Vehicle Management",
+      "detailGestionVehicule": "Allows adding, modifying, deleting, and displaying dealership vehicles.",
+
+      "titleGestionVente": "Sales Management",
+      "detailGestionVente": "Functions for creating, updating, and tracking completed sales.",
+
+      "titleSecurity": "Access Security",
+      "detailSecurity": "Use of ASP.NET Core Identity to restrict pages to authorized roles.",
+
+      "titleAzure": "Hosting",
+      "detailAzure": "Project deployed on Azure App Service with integrated SQL database.",
+
+      "titleUI": "Login Interface",
+      "detailUI": "Custom design for the login page to improve the user experience from the start.",
+
+      "titleChallenge": "Challenges Encountered",
+      "listChallenge": [
+        "Secure implementation of ASP.NET Identity",
+        "Creation of a complex CRUD for vehicles and sales",
+        "Deployment to Azure with SQL Server database"
+      ],
+
+      "titleSolution": "Solutions Provided",
+      "listSolution": [
+        "Clear and tested MVC structure",
+        "Use of DataAnnotations for form validation",
+        "Azure configuration with automatic DB migration"
+      ],
+
+      "link": "View repo Github"
+    },
+    "apiRest": {
+      "title": "REST API",
+      "intro": "REST API is a backend application developed with ASP.NET Core, using Entity Framework’s Code-First approach to manage a SQL Server database. It features a secure RESTful architecture through roles and JWT tokens.",
+
+      "titleTechnologie": "Technologies",
+      "detailTechnologie": "ASP.NET Core, Entity Framework Core, SQL Server, JWT.",
+
+      "titleArchitecture": "Architecture",
+      "detailArchitecture": "RESTful architecture with separation of concerns between controllers, services, and data access (repositories).",
+
+      "titleAut": "Authentication & Authorization",
+      "detailAut": "Authentication system based on JWT. Users receive a token after login, and access is controlled based on predefined roles.",
+
+      "titleSecurity": "Access Security",
+      "detailSecurity": "Use of JWT tokens to secure communication between client and API. Role management to restrict access to critical endpoints.",
+
+      "titleEntities": "Entity Management",
+      "detailEntities": "Implementation of CRUD (Create, Read, Update, Delete) operations for entities defined in the data model.",
+
+      "titleSQL": "Database Connection",
+      "detailSQL": "Configuration of the connection string with SQL Server for reliable data persistence.",
+
+      "titleEntityFramework": "Database Migrations",
+      "detailEntityFramework": "Use of Entity Framework Core to create and apply migrations. Synchronization between C# model and SQL database.",
+
+      "titleSwagger": "API Documentation",
+      "detailSwagger": "Integration of Swagger to automatically generate interactive documentation of REST endpoints and facilitate manual testing via a web interface.",
+
+      "titleChallenge": "Challenges Encountered",
+      "listChallenge": [
+        "Implementing secure authentication with JWT",
+        "Fine-grained authorization via user roles",
+        "Reliable synchronization of Entity Framework migrations with SQL Server",
+        "Clear and maintainable REST API structure"
+      ],
+
+      "titleSolution": "Solutions Provided",
+      "listSolution": [
+        "Use of JWT to secure stateless API",
+        "Implementation of a role-based access control system",
+        "Adoption of well-layered RESTful architecture (controllers, services, repositories)",
+        "Proper configuration of migrations and database management with Entity Framework"
+      ],
+
+      "link": "View repo Github"
     }
+  }
 }
