@@ -1,26 +1,31 @@
-/* Conteneur principal */
-a{
-    color:white;
+/* --- Code de base : Mobile First --- */
+a {
+    color: white;
 }
+
 .contact-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    display: flex; /* Pour centrer le contenu */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    z-index: 2; /* au-dessus du background */
 }
 
+
 .background-container {
-    position: absolute;
+    position: fixed; /* reste fixé en arrière-plan */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    z-index: 0; /* en-dessous du contenu */
+    overflow: hidden;
+    pointer-events: none; /* ne bloque pas les interactions */
 }
-/* Image de fond */
+
 .background-image-eva,
 .eye-image {
     position: absolute;
@@ -29,61 +34,56 @@ a{
     object-fit: cover;
     object-position: center;
 }
-/* Image de l'œil */
-/* Halo lumineux centré */
+
 .glow-point {
     position: absolute;
     top: 35%;
     left: 40%;
-    width: 4%; /* Même largeur que l'œil */
-    height: 4%; /* Même hauteur que l'œil */
+    width: 4%;
+    height: 4%;
     border-radius: 50%;
     background: radial-gradient(circle, #F4BAA4 20%, #DD3A6D 80%);
-    box-shadow: 0 0 50px 20px #DD3A6D; /* Halo externe */
-    z-index: 2; /* Devant l'œil */
-}
-.background-image-eva {
+    box-shadow: 0 0 50px 20px #DD3A6D;
     z-index: 3;
 }
 
-/* Conteneur du formulaire */
+.background-image-eva {
+    z-index: 4;
+}
+
 .contact-form-container {
     position: relative;
+    z-index: 4;
     width: 90%;
     max-width: 450px;
-    background-color: rgba(0, 0, 0, 0.6); /* Fond légèrement transparent */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 1.5rem;
     border: 2px solid white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
-    z-index: 4; /* Au-dessus de tout */
+    margin-bottom: 2rem; /* espace avant le footer */
 }
 
-/* Liste des contacts */
 .list-item {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* espace entre les éléments */
+    gap: 10px;
     margin-bottom: 15px;
 }
 
-
-/* Styles des champs de formulaire */
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Labels */
 label {
     font-weight: bold;
     text-align: left;
     margin-bottom: 5px;
 }
 
-/* Champs input et textarea */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -91,12 +91,11 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.1); /* Légère transparence */
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     box-sizing: border-box;
 }
 
-    /* Pour s'assurer que le texte dans les champs reste lisible */
     input::placeholder,
     textarea::placeholder {
         color: rgba(255, 255, 255, 0.6);
@@ -107,7 +106,6 @@ textarea {
     resize: vertical;
 }
 
-/* Bouton d'envoi */
 .button-send {
     background: #007BFF;
     color: white;
@@ -120,13 +118,64 @@ textarea {
     width: 100%;
 }
 
-    /* Effet au survol */
     .button-send:hover {
         background: #0056b3;
         transform: scale(1.05);
     }
 
-    /* Effet au clic */
     .button-send:active {
         transform: scale(0.95);
     }
+
+/* --- Responsive TABLETTE (>=768px) --- */
+@media screen and (min-width: 768px) {
+    .contact-form-container {
+        padding: 2rem;
+        max-width: 600px;
+    }
+
+    .glow-point {
+        width: 3.5%;
+        height: 3.5%;
+        top: 32%;
+        left: 42%;
+    }
+
+    input, textarea {
+        font-size: 18px;
+    }
+
+    .button-send {
+        font-size: 20px;
+    }
+}
+
+/* --- Responsive DESKTOP (>=1024px) --- */
+@media screen and (min-width: 1024px) {
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .contact-form-container {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .glow-point {
+        width: 3%;
+        height: 3%;
+        top: 30%;
+        left: 45%;
+    }
+
+    input, textarea {
+        font-size: 20px;
+    }
+
+    .button-send {
+        font-size: 22px;
+    }
+}
