@@ -1,12 +1,9 @@
 /* ----------------------------- Taille des containers ----------------------------- */
 
-.projects-wrapper, .background-image-eva-zoom {
-    width: 100%;
-    height: 100vh;
-}
-/* Conteneur principal de la page */
 .projects-wrapper {
     position: relative;
+    width: 100%;
+    height: 100vh; /* OU min-height: 100vh; */
     overflow: hidden;
 }
 
@@ -15,18 +12,18 @@
 /* Image de fond qui reste derrière le contenu */
 .background-image-eva {
     position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: auto;
 }
-
 /* ----------------------------- Contenu des projets ----------------------------- */
 
 /* Conteneur du menu des projets */
 .projects-container {
     position: relative;
     width: 100%;
-    max-width:450px;
+    max-width:600px;
     height: auto;
     padding: 20px;
     z-index: 48;

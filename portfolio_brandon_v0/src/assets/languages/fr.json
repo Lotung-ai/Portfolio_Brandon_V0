@@ -20,11 +20,12 @@
   "pageAboutMeTechnicalSkills": "Compétences techniques",
   "pageAboutMeTools": "Outils",
   "pageAboutMeFrameworksAndLibraries": "Frameworks et bibliothèques",
-  "pageProjectsTitle": "Mes projets",
+  "pageProjectsTitle": "Mes Projets",
   "pageContactTitle": "Contactez-moi",
   "pageContactName": "Nom :",
   "pageContactEmail": "Email :",
   "pageContactMessage": "Message :",
+  "pageContactButtonSend": "Envoyer",
   "projectNotFound": "Projet non trouvé",
   "projects": {
     "microservices": {

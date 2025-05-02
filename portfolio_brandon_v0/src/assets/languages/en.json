@@ -25,6 +25,7 @@
   "pageContactName": "Name:",
   "pageContactEmail": "Email:",
   "pageContactMessage": "Message:",
+  "pageContactButtonSend": "Send",
   "projectNotFound": "Project not found",
   "projects": {
     "microservices": {
