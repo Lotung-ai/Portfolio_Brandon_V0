@@ -9,7 +9,7 @@ import GallerySection from "../components/GallerySection";
 
 const contactImages = loadImages("contact");
 
-const aboutMeImages = loadImages("aboutme");
+const logosImages = loadImages("logos");
 const ContactForm = () => {
 
     const { t } = useTranslation();
@@ -119,7 +119,7 @@ const ContactForm = () => {
                         <motion.div>
                             <GallerySection
                                 names={contactLogos}
-                                imageMap={aboutMeImages}
+                                imageMap={logosImages}
                                 srcKey="Logo_"
                                 t={t}
                                 hoverEffect={true}

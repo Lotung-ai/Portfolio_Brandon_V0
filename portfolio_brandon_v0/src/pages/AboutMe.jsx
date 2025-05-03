@@ -7,6 +7,7 @@ import DecryptAnimation from "../animations/DecryptAnimation";
 import GallerySection from "../components/GallerySection";
 
 const aboutMeImages = loadImages("aboutme");
+const logosImages = loadImages("logos");
 
 const AboutMe = () => {
     const { t } = useTranslation();
@@ -101,7 +102,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeContactTitle"
                         names={contactLogos}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                         hoverEffect={true}
@@ -144,7 +145,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeTechnicalSkills"
                         names={techLogos}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                     />
@@ -163,7 +164,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeTools"
                         names={tools}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t}
                     />
@@ -181,7 +182,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeFrameworksAndLibraries"
                         names={frameworks}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                     />

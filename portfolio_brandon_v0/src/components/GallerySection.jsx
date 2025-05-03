@@ -38,12 +38,19 @@ const GallerySection = ({
                             ? customLinks[i]
                             : `projects/project-${name}`;
 
+                    // Prépare les sources d'image avec priorité pour .webp
+                    const webpSrc = imageMap[`${srcKey}${name}.webp`];
+                    const fallbackSrc =
+                        imageMap[`${srcKey}${name}.png`] ||
+                        imageMap[`${srcKey}${name}.jpg`] ||
+                        imageMap[`${srcKey}${name}.jpeg`] ||
+                        ""; // Fallback vers .png ou .jpg
+
                     const imageElement = (
-                        <img
-                            src={imageMap[`${srcKey}${name}.png`]}
-                            alt={name}
-                            className={imageClass}
-                        />
+                        <picture>
+                            {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
+                            <img src={fallbackSrc} alt={name} className={imageClass} />
+                        </picture>
                     );
 
                     return (
