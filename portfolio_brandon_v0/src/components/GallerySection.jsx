@@ -38,20 +38,18 @@ const GallerySection = ({
                             ? customLinks[i]
                             : `projects/project-${name}`;
 
+                    const imageSrc = imageMap[`${srcKey}${name}`] || "";
+
                     const imageElement = (
-                        <img
-                            src={imageMap[`${srcKey}${name}.png`]}
-                            alt={name}
-                            className={imageClass}
-                        />
+                        <img src={imageSrc} alt={name} className={imageClass} />
                     );
+
 
                     return (
                         <ItemWrapper className={logoBoxClass} key={i} {...motionProps}>
                             {addLink ? (
                                 <a
                                     href={link}
-                                    target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     {imageElement}

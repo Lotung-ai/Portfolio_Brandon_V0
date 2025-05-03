@@ -7,6 +7,11 @@
     font-style: normal;
 }
 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Fond par défaut et application de la police */
 html, body {
     background-color: #000;
@@ -21,7 +26,8 @@ html, body {
 
 /* Exemple de style pour les titres et autres éléments */
 h1, h2, h3, p,label,button, .button-send, .menu-item {
-    font-family: "akzidenz-grotesk", Arial, sans-serif; /* Applique la police à tous les éléments de texte */
+    font-family: "akzidenz-grotesk", Arial, sans-serif; 
+    z-index : 1;
 }
 /* Titres responsives */
 h1 {

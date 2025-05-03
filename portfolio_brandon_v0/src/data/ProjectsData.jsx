@@ -1,7 +1,9 @@
 ﻿
 import loadImages from "../utils/imageLoader"; // Import du loader
 
-const loadImage = loadImages("projects");
+const loadProject0Image = loadImages("projects/project-0");
+const loadProject1Image = loadImages("projects/project-1");
+const loadProject2Image = loadImages("projects/project-2");
 
 const projects = [
     {
@@ -33,8 +35,8 @@ const projects = [
         titleSolutionKey: "projects.microservices.titleSolution",
         listSolutionKey: "projects.microservices.listSolution",
         linkKey: "projects.microservices.link",
-        image_diagram: loadImage["project-0/diagram-microservice.png"],
-        image_top: loadImage["project-0/top-microservice.png"],
+        image_diagram: loadProject0Image["diagram-microservice"],
+        image_top: loadProject0Image["top-microservice"],
         link: "https://github.com/Lotung-ai/MicroServices"
     },
     {
@@ -66,8 +68,8 @@ const projects = [
         titleSolutionKey: "projects.expressVoitures.titleSolution",
         listSolutionKey: "projects.expressVoitures.listSolution",
         linkKey: "projects.expressVoitures.link",
-        image_diagram: loadImage["project-1/diagram-expressvoitures.png"],
-        image_top: loadImage["project-1/top-expressvoitures.jpg"],
+        image_diagram: loadProject1Image["diagram-expressvoitures"],
+        image_top: loadProject1Image["top-expressvoitures"],
         link: "https://github.com/Lotung-ai/ExpressVoitureAzure"
     },
     {
@@ -95,8 +97,8 @@ const projects = [
         titleSolutionKey: "projects.apiRest.titleSolution",
         listSolutionKey: "projects.apiRest.listSolution",
         linkKey: "projects.apiRest.link",
-        image_diagram: loadImage["project-2/diagram-api.png"],
-        image_top: loadImage["project-2/top-api.jpg"],
+        image_diagram: loadProject2Image["diagram-api"],
+        image_top: loadProject2Image["top-api"],
         link: "https://github.com/Lotung-ai/APIRest"
     },
 ];

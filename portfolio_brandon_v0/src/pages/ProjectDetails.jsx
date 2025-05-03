@@ -123,7 +123,7 @@ const ProjectDetails = () => {
                     srckeys={techs}
                     fadeInUp={fadeInUp}
                     loadImage={loadImage}
-                    arrowImageName="fleche.png"
+                    arrowImageName="fleche"
                     arrowClass="fleche"
                 />
             </motion.div>

@@ -7,6 +7,7 @@ import DecryptAnimation from "../animations/DecryptAnimation";
 import GallerySection from "../components/GallerySection";
 
 const aboutMeImages = loadImages("aboutme");
+const logosImages = loadImages("logos");
 
 const AboutMe = () => {
     const { t } = useTranslation();
@@ -25,7 +26,6 @@ const AboutMe = () => {
     }, [t]);
 
     const contactRef = useRef(null);
-
     const projectRef = useRef(null);
     const gallery1Ref = useRef(null);
     const gallery2Ref = useRef(null);
@@ -55,7 +55,7 @@ const AboutMe = () => {
     return (
         <motion.div className="about-me-container">
             <motion.h1
-                className="introduction-section"
+                className="title-section"
                 initial={{ x: "-30%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.2 }}
@@ -65,7 +65,7 @@ const AboutMe = () => {
 
             <motion.div className="profile-image-container">
                 <motion.img
-                    src={aboutMeImages["profil_image_eva.png"]}
+                    src={aboutMeImages["profil_image_eva"]}
                     alt="Photo-Profil-Eva"
                     className="profile-frame"
                     initial={{ opacity: 1 }}
@@ -73,7 +73,7 @@ const AboutMe = () => {
                     transition={{ duration: 2 }}
                 />
                 <motion.img
-                    src={aboutMeImages["photo.jpg"]}
+                    src={aboutMeImages["photo"]}
                     alt="Photo-Profil"
                     className="profile-image"
                     initial={{ opacity: 0 }}
@@ -81,7 +81,7 @@ const AboutMe = () => {
                     transition={{ duration: 2, delay: 1 }}
                 />
                 <motion.img
-                    src={aboutMeImages["profil_image.png"]}
+                    src={aboutMeImages["profil_image"]}
                     alt="Photo-Profil-cadre"
                     className="profile-frame"
                     initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeContactTitle"
                         names={contactLogos}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                         hoverEffect={true}
@@ -145,12 +145,12 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeTechnicalSkills"
                         names={techLogos}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                     />
                 </motion.div>
-                <img src={aboutMeImages["background4.png"]} alt="background" className="gallery-background" />
+                <img src={aboutMeImages["background4"]} alt="background" className="gallery-background" />
             </motion.div>
 
             <motion.div
@@ -164,7 +164,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeTools"
                         names={tools}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t}
                     />
@@ -182,7 +182,7 @@ const AboutMe = () => {
                     <GallerySection
                         titleKey="pageAboutMeFrameworksAndLibraries"
                         names={frameworks}
-                        imageMap={aboutMeImages}
+                        imageMap={logosImages}
                         srcKey="Logo_"
                         t={t} 
                     />
