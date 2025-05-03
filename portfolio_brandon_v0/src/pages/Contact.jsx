@@ -58,7 +58,7 @@ const ContactForm = () => {
         >
             <div className="background-container">
                 <motion.img
-                    src={contactImages["background.png"]}
+                    src={contactImages["background"]}
                     alt="background"
                     className="background-image-eva"
                     initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 />
 
                 <motion.img
-                    src={contactImages["image_eye.png"]}
+                    src={contactImages["image_eye"]}
                     alt="eye"
                     className="eye-image"
                     initial={{ opacity: 0 }}

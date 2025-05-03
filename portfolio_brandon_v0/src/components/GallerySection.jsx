@@ -38,20 +38,12 @@ const GallerySection = ({
                             ? customLinks[i]
                             : `projects/project-${name}`;
 
-                    // Prépare les sources d'image avec priorité pour .webp
-                    const webpSrc = imageMap[`${srcKey}${name}.webp`];
-                    const fallbackSrc =
-                        imageMap[`${srcKey}${name}.png`] ||
-                        imageMap[`${srcKey}${name}.jpg`] ||
-                        imageMap[`${srcKey}${name}.jpeg`] ||
-                        ""; // Fallback vers .png ou .jpg
+                    const imageSrc = imageMap[`${srcKey}${name}`] || "";
 
                     const imageElement = (
-                        <picture>
-                            {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
-                            <img src={fallbackSrc} alt={name} className={imageClass} />
-                        </picture>
+                        <img src={imageSrc} alt={name} className={imageClass} />
                     );
+
 
                     return (
                         <ItemWrapper className={logoBoxClass} key={i} {...motionProps}>

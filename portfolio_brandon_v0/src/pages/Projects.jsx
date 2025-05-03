@@ -36,7 +36,7 @@ const ProjectsPage = () => {
         <motion.div className="projects-wrapper">
             {/* Image de fond appliquée en arrière-plan après la vidéo */}
             <motion.img
-                src={loadImage["background-image-eva.png"]}
+                src={loadImage["background-image-eva"]}
                 alt="Image de fond"
                 className="background-image-eva"
                 initial={{ opacity: 0 }}

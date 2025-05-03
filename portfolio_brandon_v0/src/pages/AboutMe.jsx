@@ -65,7 +65,7 @@ const AboutMe = () => {
 
             <motion.div className="profile-image-container">
                 <motion.img
-                    src={aboutMeImages["profil_image_eva.png"]}
+                    src={aboutMeImages["profil_image_eva"]}
                     alt="Photo-Profil-Eva"
                     className="profile-frame"
                     initial={{ opacity: 1 }}
@@ -73,7 +73,7 @@ const AboutMe = () => {
                     transition={{ duration: 2 }}
                 />
                 <motion.img
-                    src={aboutMeImages["photo.jpg"]}
+                    src={aboutMeImages["photo"]}
                     alt="Photo-Profil"
                     className="profile-image"
                     initial={{ opacity: 0 }}
@@ -81,7 +81,7 @@ const AboutMe = () => {
                     transition={{ duration: 2, delay: 1 }}
                 />
                 <motion.img
-                    src={aboutMeImages["profil_image.png"]}
+                    src={aboutMeImages["profil_image"]}
                     alt="Photo-Profil-cadre"
                     className="profile-frame"
                     initial={{ opacity: 0 }}
@@ -150,7 +150,7 @@ const AboutMe = () => {
                         t={t} 
                     />
                 </motion.div>
-                <img src={aboutMeImages["background4.png"]} alt="background" className="gallery-background" />
+                <img src={aboutMeImages["background4"]} alt="background" className="gallery-background" />
             </motion.div>
 
             <motion.div
