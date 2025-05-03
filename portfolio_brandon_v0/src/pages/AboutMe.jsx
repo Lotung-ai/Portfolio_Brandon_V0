@@ -25,7 +25,6 @@ const AboutMe = () => {
     }, [t]);
 
     const contactRef = useRef(null);
-
     const projectRef = useRef(null);
     const gallery1Ref = useRef(null);
     const gallery2Ref = useRef(null);
@@ -55,7 +54,7 @@ const AboutMe = () => {
     return (
         <motion.div className="about-me-container">
             <motion.h1
-                className="introduction-section"
+                className="title-section"
                 initial={{ x: "-30%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.2 }}

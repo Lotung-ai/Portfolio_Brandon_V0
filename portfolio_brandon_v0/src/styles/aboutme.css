@@ -10,6 +10,9 @@
     padding: 2rem 0;
 }
 
+.title-section{
+    margin:10px;
+}
 .profile-image-container {
     position: relative;
     display: flex;
@@ -45,6 +48,7 @@
     margin-left: 4rem;
     z-index: 3;
 }
+
 .gallery-section {
     position: relative;
     display: flex;

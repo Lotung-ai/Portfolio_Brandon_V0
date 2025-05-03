@@ -5,12 +5,15 @@ import { useTranslation } from "react-i18next";
 import "../styles/contact.css";
 import loadImages from "../utils/imageLoader";
 
-const aboutMeImages = loadImages("contact");
+import GallerySection from "../components/GallerySection";
 
+const contactImages = loadImages("contact");
+
+const aboutMeImages = loadImages("aboutme");
 const ContactForm = () => {
 
     const { t } = useTranslation();
-
+    const contactLogos = ["Email", "LinkedIn", "Github"];
     const contactLinks = [import.meta.env.VITE_EMAIL, import.meta.env.VITE_LINKEDIN, import.meta.env.VITE_GITHUB];
 
     const [formData, setFormData] = useState({
@@ -55,7 +58,7 @@ const ContactForm = () => {
         >
             <div className="background-container">
                 <motion.img
-                    src={aboutMeImages["background.png"]}
+                    src={contactImages["background.png"]}
                     alt="background"
                     className="background-image-eva"
                     initial={{ opacity: 0 }}
@@ -64,7 +67,7 @@ const ContactForm = () => {
                 />
 
                 <motion.img
-                    src={aboutMeImages["image_eye.png"]}
+                    src={contactImages["image_eye.png"]}
                     alt="eye"
                     className="eye-image"
                     initial={{ opacity: 0 }}
@@ -109,13 +112,23 @@ const ContactForm = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
                 >
-                    <div className="list-item">
-                        {contactLinks.map((link, index) => (
-                            <a key={index} href={link} className="item-contact" target="_blank" rel="noopener noreferrer">
-                                {link}
-                            </a>
-                        ))}
-                    </div>
+                    <motion.div
+                        className="gallery-section"
+                        initial="hidden"
+                    >
+                        <motion.div>
+                            <GallerySection
+                                names={contactLogos}
+                                imageMap={aboutMeImages}
+                                srcKey="Logo_"
+                                t={t}
+                                hoverEffect={true}
+                                textKey=""
+                                addLink={true}
+                                customLinks={contactLinks}
+                            />
+                        </motion.div>
+                    </motion.div>                   
 
                     <label>{t('pageContactName')}</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} required />

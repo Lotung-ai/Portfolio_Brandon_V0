@@ -51,7 +51,6 @@ const GallerySection = ({
                             {addLink ? (
                                 <a
                                     href={link}
-                                    target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     {imageElement}

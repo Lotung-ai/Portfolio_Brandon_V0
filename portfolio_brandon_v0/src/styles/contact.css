@@ -2,7 +2,10 @@
 a {
     color: white;
 }
-
+.contact-form-container h1 {
+    width: 100%;
+    text-align: center; /* Optionnel, mais ça rend bien */
+}
 .contact-container {
     position: relative;
     width: 100%;
@@ -13,7 +16,6 @@ a {
     padding: 2rem 1rem;
     z-index: 2; /* au-dessus du background */
 }
-
 
 .background-container {
     position: fixed; /* reste fixé en arrière-plan */
