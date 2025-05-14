@@ -1,6 +1,7 @@
 ﻿import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../styles/components/footer.css";
 
@@ -50,9 +51,9 @@ const Footer = ({ fadeEffect, isFixed }) => {
                     <p>&copy; {new Date().getFullYear()} {t('footerCopyright')}</p>
                 </div>
                 <div className="footer-right">
-                    <a href="#">{t('footerAboutMe')}</a>
-                    <a href="#">{t('footerProjects')}</a>
-                    <a href="#">{t('footerContact')}</a>
+                    <Link to="/aboutme">{t('footerAboutMe')}</Link>
+                    <Link to="/projects">{t('footerProjects')}</Link>
+                    <Link to="/contact">{t('footerContact')}</Link>
                 </div>
             </div>
         </motion.footer>
