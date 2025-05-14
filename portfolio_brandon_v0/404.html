@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/portfoliobrandon/" />
+    <script>
+        // Rediriger vers l'entrée principale avec l'URL
+        const redirect = location.pathname.replace("/portfoliobrandon", "");
+        location.replace(`/portfoliobrandon/?redirect=${redirect}${location.search}${location.hash}`);
+    </script>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
