@@ -20,10 +20,10 @@ const FloatingDownloadButton = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const downloadFile = () => {
-        const fileUrl = "/assets/CV_Brandon_Ku.pdf"; // Chemin du fichier
+        const fileUrl = "src/assets/CV/CV_Brandon_KU_Backend.pdf";
         const a = document.createElement("a");
         a.href = fileUrl;
-        a.download = "CV_Brandon_Ku.pdf";
+        a.download = "CV_Brandon_KU_Backend.pdf";
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
